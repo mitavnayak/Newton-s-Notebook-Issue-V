@@ -1,0 +1,5 @@
+\contentsline {part}{Pure Mathematics}{5}%
+\contentsline {part}{Applied Mathematics}{6}%
+\contentsline {part}{Applied Mathematics}{7}%
+\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{8}%
+\contentsline {part}{Applied Mathematics}{13}%

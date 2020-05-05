@@ -3,14 +3,18 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[leqno]{amsmath}
 \usepackage{amssymb}
-\usepackage{units}
+%\usepackage{units}
 \usepackage{wallpaper}
 \usepackage{newtons-notebook}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{xurl}
 \usepackage{listings}
-\usepackage{tocloft}
+%\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
 \usepackage{setspace}
 \usepackage{titlesec}
 
@@ -18,8 +22,8 @@
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt}
 \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt}
 
-\renewcommand{\cftpartfont}{\Large\bfseries}
-\renewcommand{\cftsecfont}{\normalsize}
+%\renewcommand{\cftpartfont}{\Large\bfseries}
+%\renewcommand{\cftsecfont}{\normalsize}
 
 \setlength{\parskip}{\baselineskip}
 \renewcommand{\baselinestretch}{1.5}
@@ -66,55 +70,81 @@ Richard Phillips Feynman was an American theoretical physicist known for his wor
 
 % Begin the pure math section
 \addcontentsline{toc}{part}{Pure Mathematics}
-\nnimagepage{Pure_Math_Title_Page.pdf}
+\nnimagepage{2020_Pure_Math_Section_Title.pdf}
 
-\nnwallpaper{Pure_Math_Border.pdf}
-\def\currentTitleWallpaper{Pure_Math_Border_Title.pdf}
+\nnwallpaper{2020_Pure_Math_Page_Border.pdf}
+\def\currentTitleWallpaper{2020_Pure_Math_Title_Page_Border.pdf}
 
-\input{articles/primes-squared.tex}
-
-\newpage
-
-\input{articles/law-of-large-numbers.tex}
+\input{articles/nayak-gabriels-horn.tex}
 
 \newpage
 
-\input{articles/search-for-new-primes.tex}
+\input{articles/gao-sprague-grundy.tex}
 
 \newpage
 
-\input{articles/ordered-triples.tex}
+\input{articles/vauclain-pigeonhole.tex}
 
 \newpage
 
-\input{articles/infinitude-of-primes.tex}
+\input{articles/kait-euler.tex}
+
+\newpage
+
+% Begin the philosophy of math section
+\nnwallpaper{2020_Philosophy_Page_Border.pdf}
+\def\currentTitleWallpaper{2020_Philosophy_Title_Page_Border.pdf}
+
+\addcontentsline{toc}{part}{Applied Mathematics}
+\nnimagepage{2020_Philosophy_Section_Title.pdf}
+
+\input{articles/gottlieb-philosophy.tex}
+
+\newpage
+
+\input{articles/fairorth-plato.tex}
 
 \newpage
 
 % Begin the applied math section
-\nnwallpaper{Applied_Math_Border.pdf}
-\def\currentTitleWallpaper{Applied_Math_Border_Title.pdf}
+\nnwallpaper{2020_Applied_Math_Page_Border.pdf}
+\def\currentTitleWallpaper{2020_Applied_Math_Title_Page_Border.pdf}
 
 \addcontentsline{toc}{part}{Applied Mathematics}
-\nnimagepage{Applied_Math_Title_Page.pdf}
+\nnimagepage{2020_Applied_Math_Section_Title.pdf}
 
-\input{articles/math-modeling.tex}
-
-\newpage
-
-\input{articles/statistics-in-the-wrong-hands.tex}
+\input{articles/lee-propeller.tex}
 
 \newpage
 
-\input{articles/cryptography.tex}
+\input{articles/greer-lagrange.tex}
 
 \newpage
 
-\input{articles/pid.tex}
+\input{articles/obuz-path-generation.tex}
 
 \newpage
 
-\input{articles/eat-cafe.tex}
+\input{articles/greer-et-al-m3.tex}
+
+\newpage
+
+% Begin the applied science section
+\nnwallpaper{2020_Applied_Science_Page_Border.pdf}
+\def\currentTitleWallpaper{2020_Applied_Science_Title_Page_Border.pdf}
+
+\addcontentsline{toc}{part}{Applied Mathematics}
+\nnimagepage{2020_Applied_Science_Section_Title.pdf}
+
+\input{articles/demarco-alzheimers.tex}
+
+\newpage
+
+\input{articles/greer-neurology.tex}
+
+\newpage
+
+\input{articles/golecki-fibrillogenesis.tex}
 
 \newpage
 
