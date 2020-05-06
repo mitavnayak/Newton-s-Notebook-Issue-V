@@ -1,5 +1,6 @@
-\contentsline {part}{Pure Mathematics}{5}%
-\contentsline {part}{Applied Mathematics}{6}%
-\contentsline {part}{Applied Mathematics}{7}%
-\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{8}%
-\contentsline {part}{Applied Mathematics}{13}%
+\contentsline {part}{Pure Mathematics}{5}{figure.caption.1}%
+\contentsline {part}{Applied Mathematics}{6}{figure.caption.1}%
+\contentsline {part}{Applied Mathematics}{7}{figure.caption.1}%
+\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{8}{section*.2}%
+\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{18}{figure.caption.7}%
+\contentsline {part}{Applied Mathematics}{24}{figure.caption.10}%
