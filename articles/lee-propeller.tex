@@ -57,13 +57,14 @@ With our parameters set and our assumptions noted, we set to work trying to figu
 This, however, presented the real challenge; despite how many models we wanted to make of one blade spinning through space and time in one axis, we needed to make a model that had multiple blades spinning through space and time in 3 axes. Therefore, we needed to make a system that could model the blades in 3 dimensions. Thus, we arrive at the second stage of thinking in our breakdown of thought, which is the ability to have a 3D model of a blade spinning through space. We eventually came to the idea of a system of functions to define our curve in 3D space.
 
 Within GeoGebra, we made use of the Curve command, which essentially acts as a wrapper for a three function system.
+\renewcommand{\thefigure}{1}
 \begin{figure}[ht]
 \includegraphics{system.png}
 \caption{A screenshot from GeoGebra, showing the breakdown of the Curve command.}
 \label{fig:system}
 \end{figure}
 
-Looking at Figure \ref{fig:system}, we can start to see the structure of the Curve command. The first three parameters define the x, y, and z functions for the curve. Any transformations we want to apply to the curve must be applied to both sinusoidal functions defining the curve. The next parameter specifies the variable, and the last two specify the start and end of the curve (the domain). Using this command, we can easily begin to define our general formula.
+Looking at Figure 1, we can start to see the structure of the Curve command. The first three parameters define the x, y, and z functions for the curve. Any transformations we want to apply to the curve must be applied to both sinusoidal functions defining the curve. The next parameter specifies the variable, and the last two specify the start and end of the curve (the domain). Using this command, we can easily begin to define our general formula.
 
 This breakdown, described by our general formula, was the result of a lot of trial and error, research with external sources, and much creative thought on how to be able to combine these individual functions effectively.
 
@@ -104,22 +105,23 @@ Finally, we can find our angular frequency.
 
 After rotation speed, we needed to factor in the number of blades. This is a little more complex. Depending on the number of blades, the number of curves changes, which requires each curve’s horizontal shift to change. After finding the period of each curve, we can calculate the shift for each curve. 
 
-For explanation, assume a two blade propeller with a period of \(2\pi\). The two curves need to be equally spaced from each other. In other words, the peaks of the second curve needs to land in between the peaks of the first. We can visualize this in Desmos (Figure \ref{fig:desmos1}). Shifting the second function by \(\frac{1}{2}\) of the period moves it halfway between the first function’s starting point and the next period. \(\frac{2\pi}{2}=\pi\)
+For explanation, assume a two blade propeller with a period of \(2\pi\). The two curves need to be equally spaced from each other. In other words, the peaks of the second curve needs to land in between the peaks of the first. We can visualize this in Desmos (Figure 2). Shifting the second function by \(\frac{1}{2}\) of the period moves it halfway between the first function’s starting point and the next period. \(\frac{2\pi}{2}=\pi\)
 
 We can modify this reasoning to fit situations with more blades. Generalizing our findings, we can say that the distance between each curve should be \(\frac{p}{l}\). From our previous example:
 \[\frac{2\pi}{2\mbox{ blades}}=\pi\]
-Another example, keeping our period 2pi but with three blades (Figure \ref{fig:desmos2}):
+Another example, keeping our period 2pi but with three blades (Figure 3):
 \[\frac{2\pi}{3\mbox{ blades}}=\frac{2}{3}\pi\]
 Therefore, the second blade should be shifted \(\frac{2}{3}\pi\) from the first, and the third shifted \(\frac{4}{3}\pi\) from the first (\(\frac{2}{3}\) from the second blade). By multiplying our shift between each blade by the blade number - 1, we get the total shift from the first blade for the given blade. Combining these two findings, we can say that:
 \[c_n=\frac{p}{l}\cdot(n - 1)\]
 where \(n\) is the 1st, 2nd,...nth blade.
-
+\renewcommand{\thefigure}{2}
 \begin{figure}[ht]
 \includegraphics[width=\linewidth]{desmos1.png}
 \caption{Desmos graph, showing the proper spacing for two waves}
 \label{fig:desmos1}
 \end{figure}
 
+\renewcommand{\thefigure}{3}
 \begin{figure}[ht]
 \includegraphics[width=\linewidth]{desmos2.png}
 \caption{Desmos graph, showing the proper spacing for three waves}
@@ -164,7 +166,8 @@ Click this link to see the fully plotted example in GeoGebra. By manipulating th
 \noindent
 \textbf{Going Further}
 
-Using the aforementioned general formula, we wanted to create a fully customizable and parameterized simulation. By utilizing the scripting feature within GeoGebra, we were able to fully integrate the steps needed to generate our functions straight into our GeoGebra project. Figure \ref{fig:simuex1} shows an example use of the capabilities of our simulation.
+Using the aforementioned general formula, we wanted to create a fully customizable and parameterized simulation. By utilizing the scripting feature within GeoGebra, we were able to fully integrate the steps needed to generate our functions straight into our GeoGebra project. Figure 4 shows an example use of the capabilities of our simulation.
+\renewcommand{\thefigure}{4}
 \begin{figure}[ht]
 \includegraphics[width=\linewidth]{simuex.png}
 \caption{An example simulation.}
@@ -229,8 +232,9 @@ ashift represents the horizontal shift of the sinusoid. Each curve has a differe
 \noindent
 \textbf{Summary}
 
-In closing, we found an efficient and concise process to properly model propeller movement. Through the investigation process, we had many realizations about the behavior of sinusoids. In addition, the complexity of modeling a function in three dimensions allowed us to dig deeper not only into sinusoids, but also in defining a function in 3D space. Using GeoGebra allowed us to visualize the changes we made, and see how changes to different parts of our function affected the 3D spiral in different ways. As we investigated, we encountered many different situations which prompted further investigation. Especially when investigating the new three dimensional space, many “side investigations” took place to help explain “why?”. We think that our model is an accurate representation of real-life conditions. However, studies have found that real-life movement deviates from models. As seen in Figure \ref{fig:real}, actual propeller movement varies slightly from the modeled theoretical path. Despite this inconsistency, our model still provides an accurate depiction of ideal propeller movement.
+In closing, we found an efficient and concise process to properly model propeller movement. Through the investigation process, we had many realizations about the behavior of sinusoids. In addition, the complexity of modeling a function in three dimensions allowed us to dig deeper not only into sinusoids, but also in defining a function in 3D space. Using GeoGebra allowed us to visualize the changes we made, and see how changes to different parts of our function affected the 3D spiral in different ways. As we investigated, we encountered many different situations which prompted further investigation. Especially when investigating the new three dimensional space, many “side investigations” took place to help explain “why?”. We think that our model is an accurate representation of real-life conditions. However, studies have found that real-life movement deviates from models. As seen in Figure 5, actual propeller movement varies slightly from the modeled theoretical path. Despite this inconsistency, our model still provides an accurate depiction of ideal propeller movement.
 
+\renewcommand{\thefigure}{5}
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{image019.png}
 \caption{Diagram comparing the ideal theorized movement of a propeller vs. actual movement. (Source: www.titanicology.com/)}

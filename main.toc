@@ -1,9 +1,14 @@
-\contentsline {part}{Pure Mathematics}{5}{figure.caption.1}%
-\contentsline {section}{Pigeonhole Principle\newline Will Vauclain, Haverford '19}{6}{section*.2}%
-\contentsline {part}{Applied Mathematics}{8}{section*.2}%
-\contentsline {section}{Foundations of Mathematics\newline Dr. Mark Gottlieb, Haverford Faculty}{9}{section*.3}%
-\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19}{28}{dfninner.0.5.1}%
-\contentsline {part}{Applied Mathematics}{31}{figure.caption.5}%
-\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{32}{section*.6}%
-\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{42}{figure.caption.11}%
-\contentsline {part}{Applied Mathematics}{48}{figure.caption.14}%
+\babel@toc {english}{}
+\contentsline {part}{Pure Mathematics}{6}{figure.caption.1}%
+\contentsline {section}{Gabriel’s Horn Paradox\newline Mitav Nayak, Haverford '22}{7}{section*.2}%
+\contentsline {section}{Impartial Games and the Sprague-Grundy Theorem\newline Gary Gao, Haverford '21}{11}{figure.caption.5}%
+\contentsline {section}{Pigeonhole Principle\newline Will Vauclain, Haverford '19}{18}{figure.caption.6}%
+\contentsline {part}{Applied Mathematics}{20}{figure.caption.6}%
+\contentsline {section}{Foundations of Mathematics\newline Dr. Mark Gottlieb, Haverford Faculty}{21}{section*.7}%
+\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19}{40}{dfninner.0.5.1}%
+\contentsline {part}{Applied Mathematics}{43}{figure.caption.9}%
+\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{44}{section*.10}%
+\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{54}{figure.caption.15}%
+\contentsline {part}{Applied Science}{60}{figure.caption.18}%
+\contentsline {section}{The Root of Consciousness and Mapping the Brain\newline Alexander Greer, Haverford '20}{61}{section*.19}%
+\contentsline {section}{A Model of Shear-Induced Fibrillogenesis\newline Dr. Holly M Golecki, Professor, University of Illinois at Urbana-Champaign}{65}{section*.19}%

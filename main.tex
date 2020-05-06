@@ -16,6 +16,15 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+\usepackage{tabu}
+%\usepackage{multirow}
+\usepackage{array}
+
+\usepackage[english]{babel}
+\usepackage{longtable}
+%\usepackage[table]{xcolor} 
+%\usepackage{indentfirst}
+
 \usepackage{hyperref}
 \usepackage{color}
 
@@ -80,6 +89,17 @@
 }
 
 \usepackage{tikz}
+
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newtheorem{problem}{Problem}
+
+\newtheorem*{solution}{Solution}
+
+\newtheorem*{remark}{Remark}
 
 \begin{document}
 \setcounter{tocdepth}{1}
@@ -180,7 +200,7 @@ Richard Phillips Feynman was an American theoretical physicist known for his wor
 \nnwallpaper{2020_Applied_Science_Page_Border.pdf}
 \def\currentTitleWallpaper{2020_Applied_Science_Title_Page_Border.pdf}
 
-\addcontentsline{toc}{part}{Applied Mathematics}
+\addcontentsline{toc}{part}{Applied Science}
 \nnimagepage{2020_Applied_Science_Section_Title.pdf}
 
 \input{articles/demarco-alzheimers.tex}
