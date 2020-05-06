@@ -12,6 +12,7 @@
 \usepackage{listings}
 %\usepackage{tocloft}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
@@ -53,6 +54,32 @@
 \addtolength{\oddsidemargin}{0.25in}
 \addtolength{\textwidth}{0.5in}
 \addtolength{\topmargin}{0.25in}
+
+% Theorem Enumeration https://tex.stackexchange.com/questions/371731/versioning-theorem-numbers-with-amsthm
+\newcounter{dfnmain}[section]
+\newtheorem{dfninner}{Definition}[dfnmain]
+\makeatletter
+\renewcommand{\thedfninner}{%
+  \arabic{dfnmain}.\@arabic{\numexpr\value{dfninner}-1\relax}%
+}
+\makeatother
+\newenvironment{dfn}
+ {\stepcounter{dfnmain}\dfninner}
+ {\enddfninner}
+\newenvironment{dfn*}
+ {\dfninner}
+ {\enddfninner}
+ 
+% Example formatting https://tex.stackexchange.com/questions/357810/math-example-formatting
+\newenvironment{exm}[1]{%
+  \par  % start a new paragraph
+  \bigskip  % insert some vertical whitespace
+  \noindent % no paragraph indentation
+  \textbf{Example #1}}{%
+  \par%\bigskip % insert another paragraph break and more vert. whitespace
+}
+
+\usepackage{tikz}
 
 \begin{document}
 \setcounter{tocdepth}{1}

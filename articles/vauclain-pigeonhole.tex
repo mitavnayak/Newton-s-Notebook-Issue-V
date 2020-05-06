@@ -1,0 +1,75 @@
+\nnarticleheader{Pigeonhole Principle}{Will Vauclain, Haverford '19}
+
+In the field of Discrete Mathematics, there is a theorem commonly known as the
+Pigeonhole Principle. In its most basic form, it states ``if you have $n$
+holes and $n + 1$ pigeons, then there must be two pigeons in the same hole.''
+While this statement seems obvious, it is useful in proving a wide variety of
+theorems. In this article, we will prove two: the first purely theoretical and
+the second a practical application in computer science.
+
+\textit{Theorem 1: In any geometric progression 1, $a$, $aa$, $a^3$, etc.,
+outside of the first term 1, there is still another term $a^t$ which is
+congruent to the unity relative to the modulus $p$ when $p$ is prime relative
+to $a$; and the exponent $t$ is $< p$.}
+
+This theorem appears in Gauss's
+\textit{Disquisitiones Arithmeticae}, and his main argument relies upon the Pigeonhole
+Principle. To start with, we should rephrase the question in more
+understandable terms. Gauss claims that given two numbers $a$ and $p$ which are
+relatively prime (i.e. they share no common factors besides 1), there exists
+some number $a^t$ such that $a^t - 1$ is divisible by $p$, and $1 \leq t < p$.
+For example, for $a = 3$ and $p = 2$, $3^1 - 1 = 2$, which is divisible by 2,
+and $1 \leq 1 < 2$.
+
+\noindent
+\textbf{Proof:}
+
+Let us first consider all possible remainders when dividing
+$a^t$ by $p$. Since $a$ is not divisible by $p$ (otherwise they would share a
+common factor of $p$), $a^t / p$ can only have a remainder between 1 and $p -
+1$. Suppose that there are no values of $t$, $1 \leq t < p$, such that $a^t -
+1$ is divisible by $p$, which means that no $a^t$ has remainder 1 (we will show
+why this is impossible, thus proving that there must exist such a $t$). This
+means that there are $p - 2$ possible remainders for $a^t / p$ (any value from
+2 to $p - 1$). Since there are $p - 1$ possible values of $t$, by the
+Pigeonhole Principle, there must be two $t$'s such that $a^t / p$ has the same
+remainder $r$. Let the larger one be $u$ and the smaller one be $v$. Since
+$a^u$ and $a^v$ both have the same remainder when divided by $p$, $a^u - a^v$
+must be divisible by $p$. $a^u - a^v = a^v(a^{u - v} - 1)$. Since we know $a^v$
+cannot be divisible by $p$, $a^{u - v} - 1$ must be divisible by $p$, and since
+$u > v$, we know $1 \leq u - v < p$. This contradicts what we assumed earlier:
+that there is no such value of $t$. Therefore, there must always be some $t$,
+$1 \leq t < p$, such that $a^t - 1$ is divisible by $p$.
+
+\textit{Theorem 2: It is impossible to create a lossless algorithm
+which compresses each input file to a smaller output file.} 
+
+This theorem has practical applications pretty much everywhere computers are used. A lossless
+compression algorithm is any compression algorithm which allows the input to be
+perfectly reconstructed from the output (think of a .zip file, where
+files are reconstructed perfectly from their compressed form). The theorem states that every
+lossless compression algorithm must have some file  it cannot compress into a smaller size.
+
+\noindent
+\textbf{Proof:}
+
+For simplicity, we will assume that every input file has
+exactly $k$ bits of information, for some $k$ (in other words, it can be
+represented as a binary number with $k$ ones and zeros). This simplifying
+assumption turns out not to matter, as we will see later, but it makes the math
+considerably easier. Let us first figure out how many possible output files
+there are (i.e. how many possible strings of ones and zeros with length less
+than $k$). The number of strings of ones and zeros of length $p$ turns out to
+be equal to $2^p$, since for each digit you can pick either a 1 or a 0. Thus the
+number of strings of length less than q is $2^0 + 2^1 + \ldots + 2^{k - 1}$.
+This is a finite geometric series, so its sum is equal to $\frac{2^{k - 1 + 1}
+- 1}{2 - 1} = 2^k - 1$. Since there are $2^k$ files with exactly $k$ bits of
+information, and only $2^k - 1$ files with less than $k$ bits of information,
+by the Pigeonhole Principle any compression algorithm which makes every file
+smaller must map two files to the same output, but this would mean that the
+compression algorithm is not lossless, since you would not be able to tell
+which of the two input files was used to create the output file. Here we see
+how our simplifying assumption doesn't matter. If we consider files of every
+size, then some of the smaller output files would map to smaller input files,
+which just makes the lack of available output files even worse. Thus, every
+lossless compression algorithm must fail to make some of its inputs smaller.

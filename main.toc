@@ -1,6 +1,9 @@
 \contentsline {part}{Pure Mathematics}{5}{figure.caption.1}%
-\contentsline {part}{Applied Mathematics}{6}{figure.caption.1}%
-\contentsline {part}{Applied Mathematics}{7}{figure.caption.1}%
-\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{8}{section*.2}%
-\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{18}{figure.caption.7}%
-\contentsline {part}{Applied Mathematics}{24}{figure.caption.10}%
+\contentsline {section}{Pigeonhole Principle\newline Will Vauclain, Haverford '19}{6}{section*.2}%
+\contentsline {part}{Applied Mathematics}{8}{section*.2}%
+\contentsline {section}{Foundations of Mathematics\newline Dr. Mark Gottlieb, Haverford Faculty}{9}{section*.3}%
+\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19}{28}{dfninner.0.5.1}%
+\contentsline {part}{Applied Mathematics}{31}{figure.caption.5}%
+\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{32}{section*.6}%
+\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{42}{figure.caption.11}%
+\contentsline {part}{Applied Mathematics}{48}{figure.caption.14}%
