@@ -83,7 +83,90 @@ If density, $\rho$, does not change with time, there is no flow in the $r$ direc
 \textit{Conservation of Momentum:}
 
 A very common case of Navier Stokes in cylindrical coordinates is axisymetric flow assuming no tangential velocity. The remaining quantities are independent of $\theta$. Therefore, N-S$_\theta$ goes to zero. Because we assume no flow in the $r$ direction, hydrostatic pressure is negligible, and $\frac{\partial u_z}{\partial z} = 0$ from continuity equation, N-S$_r$ goes to zero as well. From here, we study N-S in the $z$-direction:
+\[z:(
+\frac{\partial u_z}{\partial t}
++u_r\frac{\partial u_z}{\partial r}
++\frac{u_\theta}{r}\frac{\partial u_z}{\partial \theta}
++u_z\frac{\partial u_z}{\partial z})
+= -\frac{\partial p}{\partial r}
++\mu(
+\frac{1}{r}\frac{\partial}{\partial r}(
+r\frac{\partial u_z}{\partial r})
++\frac{1}{r^2}\frac{\partial^2 u_z}{\partial \theta^2}
++\frac{\partial^2 u_z}{\partial z^2})
++\rho g_z
+\]
+The volumetric other body forces term, $\rho g_z$, is substituted with the volumetric centripetal force of rotation. Because $a = \Omega^2 r$, we replace the acceleration term with $\rho g \sim \rho \Omega^2 (z-M)$, with the assumption that $g<<\Omega^2 (z-M)$. We assume velocity does not change with time and velocity in the $r$ and $\theta$ directions is zero. The equation $\frac{\partial u_z}{\partial z} = 0$ above and the fact that we assume flow is axisymmetric, allows us to further simplify Navier Stokes$_z$ to:
+\[0 = -\frac{\partial P}{\partial z}
++ \frac{\mu}{r}\frac{d}{dr}(
+r\frac{du_z}{dr})
++\rho\Omega^2z
+\]
+Using Mathematics to solve for $u_z$ results in
+\[u_z
+= \frac{1}{4\mu}(
+\frac{dP}{dz} - \rho\Omega^2(z-M))
+r^2+c1\ln{r}+c2
+\]
+Pressure, $P=a_1+a_2z+a_3z^2$, simplifies to $\frac{\partial P}{\partial z} = a_2+2a_3$.
+Next, we consider boundary conditions: $u_z$ is finite at $r=0$, $\ln{(0)}=1\rightarrow c_1=0$
+From the continuity equation:
+\[\frac{\partial u_z}{\partial z}
+= 0 = \frac{\partial}{\partial z}
+[\frac{1}{4\mu}(a_2+2a_3z-\rho\Omega^2z+\rho\Omega^2M)r^2+c_2]
+\]
+\[0=2a_3-\rho\Omega^2\]
+\[a_3=\frac{1}{2}\rho\Omega^2\]
+\[u_z=\frac{1}{4\mu}a_2 \cdot r^2 + c_2\]
+Pressure Boundary Conditions at bottom and top of reservoir:
+\[P_{bottom} = a_1+a_2M+\frac{1}{2}\rho\Omega^2M^2=\rho gh\]
+\[P_{top}=a_1+a_2(M+L)\frac{1}{2}\rho\Omega^2(M+L)^2 = 0\]
+Subtract $P_{top}-P_{bottom}$
+\[a_2=-\frac{\rho gh}{L} - \rho\Omega^2M-\frac{1}{2}\rho\Omega^2L\]
+No slip boundary conditions at the pipe wall requires $u_z(r=R)=0$
+\[c_2 = \frac{1}{4\mu}(\frac{\rho gh}{L}-\rho\Omega^2M-\frac{1}{2}\rho\Omega^2L)R^2\]
+\[u_z=\frac{1}{4\mu}(\frac{\rho gh}{L}+\rho\Omega^2M+\frac{1}{2}\rho\Omega^2L)(R^2-r^2)\]
+\[u_z=\frac{\rho}{8l\mu}(2gh+2\Omega^2ML+\Omega^2L^2)(R^2-r^2)\]
+The shear stress is generally defined as:
+\[\tau(r)=\mu\frac{du_z}{dr}\]
+and specifically as:
+\[\tau(r)=(-\frac{\rho}{4L}(2gh+2\Omega^2ML+\Omega^2L^2)r)\]
+Hydrostatic pressure $\frac{dp}{dz}\sim\frac{\Delta p}{\Delta z} = -|\frac{\Delta p}{\Delta z}|$
+\[\tau(r)\propto R\]
+\[\tau(r)\propto \Omega^2\]
+Hydrostatic pressure is negligible compared to centripetal pressure due to reservoir spinning with $\rho_{FN solution}\sim 1600\frac{kg}{m^3},g=9.8\frac{m}{s^2},h\sim 0.1m.$
+\[P_{hydrostatic\,@\,bottom\,of\,res.} = \rho gh 
+= (1600\frac{kg}{m^3})
+(g=9.8\frac{m}{s^2})
+(0.1m)
+= 156.8\,Pa
+\]
+\[P_{centripetal} = \rho z\Omega^2
+= (1600\frac{kg}{m^3})
+(0.01m)^2
+(333\frac{1}{s})^2
+= 17742\,Pa
+\]
+The below equation gives the shear stress distribution, $\tau(r)$, that scales linearly with distance from the center and is dependent on rotation speed,
+\[\tau(r)=(-\frac{\rho}{4L}(2gh+2\Omega^2ML+\Omega^2L^2)r)\]
+where $\rho$ is protein solution density, $L$ is orifice length, $\mu$ is dynamic viscosity, $h$ is reservoir height, $\Omega$ is rotation speed, $M$ is reservoir radius, and $r$ is orifice radius. Calculated shear stresses achievable within the spinning reservoir ranges from $0-30\,kPa$. This range of fluid shear stress is achieved through a combination of high rotation speeds ($\sim 30000\,rpm$) and small orifice geometries ($\sim 400\mu m$ diameter).  
 
+\renewcommand{\thefigure}{5}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=\linewidth]{golecki_figure_5}
+  \end{center}
+  \caption{Visualization of fluid shear model within the orifice of a spinning reservoir.}
+\end{figure}
+
+\noindent
+\textbf{Conclusion}
+
+In addition to shear forces unfolding the FN molecules and inducing fibrillogenesis, it may be possible to modulate the degree of unfolding with applied shear. Our model indicates that by increasing rotation speed from $25,000rpm$ to $75,000rpm$, you increase the shear and achieve a negligible difference in percentage unfolding, but with increasing shear there is an increasing extent of unfolding. This makes it possible to spin FN solutions, at two spinning speeds and achieve fibers with different degrees of folded untrastructure. 
+
+It is well understood that the ECM recruits and stabilizes growth factors. Within a wound site, the ECM can concentrate growth factors to promote healing \cite{sawicka}. Beyond simply acting as a reservoir for growth factors, ECM proteins can modulate the activity of growth factors. FN can enhance the activity of growth factors via cryptic binding sites that become exposed when the protein fibrils are under cellular tension \textit{in vivo}. For example, VEGF, a growth factor important for vascularization of regenerated skin, attaches to one exposed FN binding site and one cryptic site along the molecule \cite{sawicka}. Within the folded FN domains, FN peptide, P12, can bind platlet derived growth factor with high affinity. As lab scale production of FN is explored, what role can mechanical stretch play in tuning biological activity to improve wound healing? Can FN fibers spun at high speeds in RJS bind growth factors with higher affinity than those at low speeds? Can FN fibers be produced with higher affinity for growth factor binding than naïve fibers further enhancing the wound healing capabilities of FN fibrils and wound dressings? The shear model presented here provides a tool to explore the mechanochemical properties of engineered proteins.
+
+Article adapted from Golecki, H. (2018) From Design to Production: Applications of Polymer and Protein Nanofibers for Regenerating Tissue. Ph.D. Dissertation. Harvard University.
 
 \noindent
 \textbf{References}
