@@ -36,6 +36,8 @@
 \usepackage{setspace}
 \usepackage{titlesec}
 
+\usepackage{wrapfig}
+
 % https://tex.stackexchange.com/questions/19660/how-to-make-the-size-of-pdf-output-wider
 \setlength{\paperwidth}{9.5in} % set dimension of \paperwidth to 25 cm
 \addtolength{\paperheight}{1in} % enlarge \paperheight by 1 inch
@@ -104,16 +106,24 @@
 \begin{document}
 \setcounter{tocdepth}{1}
 
+% v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
 \nnimagepage{2020_Front_Cover.pdf}
-
-\begin{figure}[H]
-    \centering \includegraphics[scale=1]{newton.jpg}
-    \\
-    \textbf{\large{``To explain all nature is too difficult a task for any one man or even for any one age. `Tis much better to do a little with certainty and leave the rest for others that come after you.'' --Isaac~Newton}}
-\end{figure}
 
 \nnwallpaper{2020_Intro_Section_Page_Border.pdf}
 
+\begin{figure}[H]
+    \centering \includegraphics[scale=.9]{newton.jpg}
+\end{figure}
+
+\begin{center}
+    \textit{To explain all nature is too difficult a task\\
+    for any one man or even for any one age.\\
+    'Tis much better to do a little with certainty\\
+    and leave the rest for others that come after you.}\\
+    	$\sim$Isaac Newton
+\end{center}
+
+\newpage
 \begin{spacing}{1.0}
 \tableofcontents
 \end{spacing}
@@ -215,17 +225,31 @@ Richard Phillips Feynman was an American theoretical physicist known for his wor
 
 \newpage
 
+\nnwallpaper{2020_Intro_Section_Page_Border.pdf}
+
 \begin{figure}[H]
     \centering
-    \vspace*{125pt}
-    \includegraphics[scale=1.5]{newtons_notebook_fibonacci_spiral.png}
-    \vspace*{100pt}
-    \\
-    \Large If you are interested in contributing to Newton’s Notebook in 2019--2020, contact Alexander Greer, the Editor-in-Chief for Volume IV.
+    \vspace*{50pt}
+    \includegraphics[scale=1.25]{newtons_notebook_fibonacci_spiral.png}
+    \vspace*{25pt}
 \end{figure}
 
-\newpage
+    This issue of the \textit{Notebook} included submissions from our own students and faculty as well as alumni and friends of the Haverford community outside the walls of Wilson Hall. Also added in this issue were two new sections containing more complex articles with advanced arguments. The \textit{Notebook} team hopes that the increasing diversity of this journal inspires its readers to pursue STEM with unremitting fervor and renewed dedication. 
 
+\begin{quotation}
+\textit{We are at the very beginning of time for the human race. It is not unreasonable that we grapple with problems. But there are tens of thousands of years in the future. Our responsibility is to do what we can, learn what we can, improve the solutions, and pass them on.}
+	\begin{flushright}
+$\sim$Richard P. Feynman
+	\end{flushright}
+\end{quotation}
+
+\begin{center}
+If you are interested in contributing to the 2020-2021 edition of \textit{Newton’s Notebook},\\ 
+please contact Gary Gao or Safa Obuz, Editors-in-Chief for Issue V.
+\end{center}
+
+% v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
+\newpage
 \nnimagepage{2020_Back_Cover.pdf}
 
 \end{document}
