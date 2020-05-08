@@ -3,15 +3,15 @@
 \contentsline {section}{Gabriel’s Horn Paradox\newline Mitav Nayak, Haverford '22}{7}{section*.2}%
 \contentsline {section}{Impartial Games and the Sprague-Grundy Theorem\newline Gary Gao, Haverford '21}{11}{figure.caption.5}%
 \contentsline {section}{Pigeonhole Principle\newline Will Vauclain, Haverford '19, University of Pennsylvania '23}{18}{figure.caption.6}%
-\contentsline {section}{Four Proofs of Euler's Identity\newline Elise Kait, Baldwin '21}{20}{figure.caption.6}%
-\contentsline {part}{Applied Mathematics}{21}{figure.caption.6}%
-\contentsline {section}{Foundations of Mathematics: Part I\newline Dr. Mark Gottlieb, Haverford Faculty}{22}{section*.7}%
-\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19, St. Charles Borromeo Seminary}{30}{dfninner.0.4.1}%
-\contentsline {part}{Applied Mathematics}{33}{figure.caption.9}%
-\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{34}{section*.10}%
-\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{44}{figure.caption.15}%
-\contentsline {section}{Team $\#$14169 M3 Challenge Submission: Keep on Trucking\newline Alexander Greer '20, Andrew Feng '20, Gary Gao '21, Xiaolong Huang '21, Alex Hull '21}{50}{figure.caption.18}%
-\contentsline {part}{Applied Science}{51}{figure.caption.18}%
-\contentsline {section}{tDCS and rTMS: Promising Treatments for Alzheimer’s Disease\newline Carson DeMarco, Haverford '20}{52}{section*.19}%
-\contentsline {section}{The Root of Consciousness and Mapping the Brain\newline Alexander Greer, Haverford '20}{56}{figure.caption.20}%
-\contentsline {section}{A Model of Shear-Induced Fibrillogenesis\newline Dr. Holly M Golecki, Professor, University of Illinois at Urbana-Champaign}{60}{figure.caption.20}%
+\contentsline {section}{Four Proofs of Euler's Identity\newline Elise Kait, Baldwin ‘21}{20}{figure.caption.6}%
+\contentsline {part}{Applied Mathematics}{28}{figure.caption.13}%
+\contentsline {section}{Foundations of Mathematics: Part I\newline Dr. Mark Gottlieb, Haverford Faculty}{29}{section*.14}%
+\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19, St. Charles Borromeo Seminary}{37}{dfninner.0.4.1}%
+\contentsline {part}{Applied Mathematics}{40}{figure.caption.16}%
+\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{41}{section*.17}%
+\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{51}{figure.caption.22}%
+\contentsline {section}{Team $\#$14169 M3 Challenge Submission: Keep on Trucking\newline Alexander Greer '20, Andrew Feng '20, Gary Gao '21, Xiaolong Huang '21, Alex Hull '21}{57}{figure.caption.25}%
+\contentsline {part}{Applied Science}{58}{figure.caption.25}%
+\contentsline {section}{tDCS and rTMS: Promising Treatments for Alzheimer’s Disease\newline Carson DeMarco, Haverford '20}{59}{section*.26}%
+\contentsline {section}{The Root of Consciousness and Mapping the Brain\newline Alexander Greer, Haverford '20}{63}{figure.caption.27}%
+\contentsline {section}{A Model of Shear-Induced Fibrillogenesis\newline Dr. Holly M Golecki, Professor, University of Illinois at Urbana-Champaign}{67}{figure.caption.27}%
