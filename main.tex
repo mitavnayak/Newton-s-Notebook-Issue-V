@@ -41,8 +41,8 @@
 \usepackage{wrapfig}
 
 % https://tex.stackexchange.com/questions/19660/how-to-make-the-size-of-pdf-output-wider
-\setlength{\paperwidth}{9.5in} % set dimension of \paperwidth to 25 cm
-\addtolength{\paperheight}{1in} % enlarge \paperheight by 1 inch
+\setlength{\paperwidth}{8.75in} % set dimension of \paperwidth to add .125 inch on either sidev
+\addtolength{\paperheight}{0.25in} % enlarge \paperheight by .25 inch
 
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt}
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt}
@@ -58,9 +58,9 @@
 % Margin Formatting https://en.wikibooks.org/wiki/LaTeX/Page_Layout
 \addtolength{\hoffset}{0in}
 \addtolength{\voffset}{0in}
-\addtolength{\oddsidemargin}{0.25in}
+\addtolength{\oddsidemargin}{-.125in}
 \addtolength{\textwidth}{0.5in}
-\addtolength{\topmargin}{0.25in}
+\addtolength{\topmargin}{-.125in}
 
 % Theorem Enumeration https://tex.stackexchange.com/questions/371731/versioning-theorem-numbers-with-amsthm
 \newcounter{dfnmain}[section]
@@ -105,7 +105,7 @@
 \setcounter{tocdepth}{1}
 
 % v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
-\nnimagepage{2020_Front_Cover.pdf}
+% \nnimagepage{2020_Front_Cover.pdf}
 
 \nnwallpaper{2020_Intro_Section_Page_Border.pdf}
 
@@ -249,7 +249,7 @@ please contact Gary Gao, Mitav Nayak, or Shibo Zhou, Editors for Issue V.
 \end{center}
 
 % v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
-\newpage
-\nnimagepage{2020_Back_Cover.pdf}
+%\newpage
+%\nnimagepage{2020_Back_Cover.pdf}
 
 \end{document}
