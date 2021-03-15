@@ -1,0 +1,41 @@
+\nnarticleheader{The Missing Dollar Problem}{Adamya Aggarwal, Haverford '22}
+
+
+\section*{The Problem}
+Three travelers register at a hotel and are told that their rooms will cost \$10 each so they pay \$30. Later the clerk realizes that he made a mistake and should have only charged them \$25. He gives a bellboy \$5 to return to them but the bellboy is dishonest and gives them each only \$1, keeping \$2 for himself as a tip. So the men actually spent \$27 and the bellboy kept \$2. What happened to the other dollar of the original \$30?
+
+\section*{The Explanation}
+This classic mathematical fallacy tries to trick you by bombarding you with numbers and forcing you to apply a nonsensical equation to make you lose sight of the true answer. If we do our bookkeeping correctly, we see that there is no missing dollar. 
+
+The register has \$25. The total refund was \$5. Of that refund, \$3 went to the guests, and \$2 went to the bellboy. So 25 + 3 + 2 = 30. There doesn’t appear to be a missing dollar. So where is the confusion?
+
+Let’s organize the information in a series of equations:
+
+\vspace{-5mm}
+
+\begin{align*}
+    10 + 10 + 10 &= 30 && \text{\$30 is the initial bill} \\
+    \midrule
+    10 + 10 + 10 &= 25 + 5 && \parbox[t]{5cm}{
+          \$25 is the actual bill and \$5 is the refund} \\
+    \midrule
+    10 + 10 + 10 &= 25 + 3 + 2 && \parbox[t]{5cm}{
+          \$3 is how much the bellboy gives back to the guests and \$2 is how much he keeps for himself} \\
+    \midrule
+    9 + 9 + 9 &= 25 + 2 && \parbox[t]{5cm}{
+            Subtracting the \$3 from both sides, we see each guest paid \$9}
+\end{align*}
+
+In the last step lies the confusion. The riddle forces you to draw up the equation
+\begin{equation*}
+    9 + 9 + 9 + 2 = 29 \neq 30
+\end{equation*}
+
+But this is simply the wrong equation. Note that the \$9 that each guest pays \textit{includes} the bellboy’s \$2 tip, and there is no reason to add it again. It should be $9 + 9 + 9 = 25 + 2$ because effectively, the guests are paying \$9 each, \$25 to the hotel and \$2 to the bellboy. If we just add back the \$3 that was refunded to the guests, we arrive at a grand total of \$30. There is no missing dollar.
+
+\vspace{5mm}
+
+\textit{An approximate answer to the right question is worth a great deal more than a precise answer to the wrong question}
+\begin{flushright}
+       John Tukey
+\end{flushright}
