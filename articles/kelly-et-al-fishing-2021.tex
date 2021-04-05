@@ -1,0 +1,140 @@
+\nnarticleheader{Fishing Reels Investigation}{Colin Kelly, Kiran Mistry, and Roch Parayre, Haverford '23}
+
+\emph{"Fish on!"} is a common phrase used by many fishers to declare when a fish is hooked on the line and they begin to reel it in. Of course, this phrase means that there is a “fish on” the line. With this in mind, think about the phrase \emph{“Moon on!”} It seems silly, right? How could it even be possible to reel in the moon with a fishing rod? Even if it were possible, wouldn’t it take millions of years? Well, in this investigation, our group dove into this hypothetical situation and tried to answer the question of how long it would take to reel in the moon with a constant reeling speed, using four different kinds of fishing rods.
+
+To answer this question, we needed to look at the idea of rotary motion and analyze how it applies to a fishing rod. The first thing we decided was that we should have a constant reeling speed — that is, constant speed of hand motion. Four handle revolutions per second seemed like a realistic pace that was fast but a human could definitely hold. Because we decided that the handle turn speed would be constant, that meant that the angular velocity of the reel would be constant too. However, we discovered that even though the angular velocity would be constant, the linear velocity of the outside of the reel, which defines the speed that the fishing line is reeled in, would not be constant. This is because as string wraps around the reel, it adds to its circumference. This seemingly simple and small detail was actually the hardest part of cracking this problem. We learned through investigating that the effects of this slow increase in the circumference of the reel are much more complicated than they seem on the surface. This
+discovery also made us immediately realize that there would definitely be upwards curvature in the graph of this equation because the rate of change, or slope, increases over time.
+
+Before beginning our work, we also had to structure and define some of the details of the problem we were trying to solve. The first one was that the length of the entire string would be exactly the distance from earth to the moon. This means that when you start to reel in the fishing line, the reel is bare. So, during the reel’s first revolution it has no string on it. Another thing that we decided was to make the width of the reel the same as the width of the string. This means that as revolutions are completed, the fishing line immediately begins wrapping on top of itself, not next to the previously wrapped string. After everything was agreed upon, we began to explore our problem and how to solve it.
+
+Our first step was to determine the different types of fishing rods that we would use for the investigation. Through our research, we found three distinct types: baitcasting, spinning, and spin cast. Baitcasting rods are most often used with heavier lures and ones that can be handled with more force. Baitcasters are better for precision, but they require more experience. Spinning reels, which are by far the most popular type, are much more simple and designed for the use of lighter baits. Spin cast reels are the most basic and cheap, and are primarily made for beginners. After learning about the different types of fishing rods, we began research on the more specific aspects of fishing rods. The reel is the part that actually pulls in the fishing line, and it is where the string wraps around as it gets pulled in. The handle is turned by the person operating the fishing rod, and spins the reel at a speed determined by the gear ratio between them. The gear ratio tells you how many times the reel turns per every revolution of the handle. After developing a solid general understanding of how fishing rods work and the variations between different models, we selected four fishing rods that we would use in our investigation. For each rod, wefound the gear ratios and the amount of string reeled in by each handle turn in inches. Then, with these two pieces of information, we calculated the base circumference of each fishing rods’ reel. This could easily be done by dividing the amount of inches reeled in per handle turn by the gear ratio between the handle and the reel.
+
+$$\frac{\text{number of inches}}{\text{1 handle rev}} \times \frac{\text{1 handle rev}}{\text{number of reel rev}} = \frac{\text{number of inches}}{\text{reel rev}}
+$$
+
+The product of these two proportions is the number of inches of string reeled in on the first reel revolution, or the circumference of the reel.
+
+At this point, there were only a few other values that were left to determine. Because we decided that our constant handle speed would be four handle rotations per second, multiplying this value by the gear ratio gave us the number of rotations of the reel per second. Then, all that was left was to determine how thick the fishing line was for each fishing rod. The thickness of the line has an astounding impact on the results of this problem, as it determines how quickly the rate that string is reeled in grows. This table displays all the necessary values for each rod:
+
+
+
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Type of Rod                                                                       & \begin{tabular}[c]{@{}l@{}}Gear \\ ratio\\ (reel:\\ handle)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Line reeled\\ in per \\ handle\\ revolution\\ (in)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Number of \\ reel rotations\\ per second\\ (rev/sec)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Circum-\\ ference\\ of reels \\ (in)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Width of\\ fishing\\ line (in)\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}TATULA\\ TYPE-R\end{tabular}                           & 8:1:1                                                                    & 33.9                                                                                       & 32.4                                                                                         & 4.185                                                                        & .009                                                                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}REV04\\ SX-HS\end{tabular}                             & 7:3:1                                                                    & 30                                                                                         & 29.2                                                                                         & 4.110                                                                        & .009                                                                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}Lew's\\ American\\ Hero Speed\\ Spin Reel\end{tabular} & 6:2:1                                                                    & 32                                                                                         & 24.8                                                                                         & 5.161                                                                        & .018                                                                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}Zebco \\ Bullet\\ Spincast \\ Reel\end{tabular}        & 5:1:1                                                                    & 29.6                                                                                       & 20.4                                                                                         & 5.803                                                                        & .0148                                                                  \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+
+To make things easier when writing equations, we decided to use the TATULA TYPE-R fishing rod for all of our primary calculations. The table above made it easy to change the values in our equations after they were written.
+
+As we investigated how best to calculate how long it would take to reel in the moon, we realized that this would depend mostly on the changing circumference of the reel. The circumference of the reel is how much line is reeled in on a certain rotation. However, this circumference is not constant. As more and more fishing line is reeled in, it adds to the radius (and therefore circumference because the equation for circumference is $c=2\pi r$) because the string is wrapping around the reel as it spins. However, what makes this problem both interesting and difficult is the radius is not always increasing. The radius only increases once a full rotation is completed because that’s when a new ‘layer’ of fishing line begins overlapping with previous ones. This pattern of only increasing after a certain interval reminded us of a step function. The specific step function that it required, we soon discovered, is a floor function, one that rounds the input down to the nearest integer. It’s a floor function because in a half revolution of the reel, the radius is still what it was at the completion of the previous full revolution. Because of this, the function would have to round down instead of up.
+
+At first, we started working on the equation in terms of circumference, because that was what we were trying to measure. But, we discovered that it would actually be easier to write the equation in terms of radius and then multiply the whole equation by $2\pi$. Because we were using the TATULA TYPE-R rod for our initial calculations, the radius of the bare reel was $113/(54\pi)$, the thickness of the string was $0.009$, and the number of reel revolutions per second was $32.4$. Using these three values, we determined the circumference of the reel in inches as a function of time in seconds to be: $C(x)=2\pi (0.009(\text{Floor}(32.4x))+113/(54\pi))$.
+
+Once we had this function, we began our work to formulate a final function — one that modeled inches pulled in by the fishing rod as a function of time in seconds. If we found this equation, we could use it to solve for the amount of time it would take to reel in the moon by setting the output value equal to the distance from earth to the moon. However, we had no idea where to start.
+
+After a particularly draining call one night, the members of our group went to sleep with a lot to think about. The next morning, two members of our group, Colin and Kiran, each had their own ideas of what the final equation would look like. The third member, Roch, was not adamant about either. Colin was certain that the function for circumference would somehow be related to the slope of the graph for the final equation. He tried many different methods that incorporated this idea by multiplying x by the entire circumference equation. But the biggest problem that this way of thinking faced was that there were many skips and jumps in the function that didn’t accurately model the amount of string reeled at any given time — a problem that came with using a step function. He tried fixing this by subtracting the amount of space that was skipped as a function of x from the equation, however because the jumps kept getting bigger, he could never find the right expression to model that space accurately enough.
+
+Kiran’s idea, one that was very different from Colin’s, had to do with the second derivative of calculus. Taking the second derivative of something simply means to take the derivative twice. For a function, this means finding the rate of change of a rate of change, or the slope of a slope. Using this strategy, Kiran calculated the continuous rate of change of the radius of the reel for the first fishing rod — 2.916 inches every 10 seconds. Then, we changed the equation to model the rate of change for the circumference by multiplying the whole equation by $2\pi$. The equation he came up with for the first fishing rod was:
+
+$$f(x)=(32.4\cdot x \cdot \frac{33.9}{8.1}) + (.018\pi)(x-1)
+$$
+
+However, checking it by hand revealed that this was in fact incorrect. It did not work because this equation was incapable of adding the fishing line added by previous rotations into the sum of the output. So, another equation had to be found.
+
+Although both equation models were incorrect, they were part of the long process to determine what the correct equation really was. Kiran’s equation in particular inspired an idea. Because the only problem with the equation was that it could not add all of the previous string wraps and incorporate it into the y-value, all we had to do was alter the equation slightly to include these previous wraps. However, exactly how one could do that stumped us for a while.
+
+Finally, after testing countless different methods that all failed, we found a certain Greek letter that we could possibly use. It was Sigma, or $\Sigma$. In mathematics, Sigma represents the summation function. The summation function is unique because it can add all of the integers in an arithmetic sequence. The lower space is for the lower bound, and the upper space is for the upper bound. The space on the right is for the function that all of the integers will be inputted into. Then, Sigma takes the sum of all the outputs of the function on the right when each integer 10 in the defined set is inputted. For example, the value of $\sum_{n=1}^{10} n$ is 55. The lowest integer is 1 and the highest integer is 10, so Sigma takes this: $1+2+3+4+5+6+7+8+9+10=55$. You can also put a function into the space on the right of Sigma. So, $\sum_{n=3}^{5} 2n+1 =2(3)+1+2(4)+1+2(5)+1 = 27.$
+
+After playing around with the summation function, we discovered that it solved our biggest problem in finding the correct equation. It was capable of adding up a large number of distinct values in a very clean way that we could control. All that was left to do was to figure out how to integrate Sigma into an equation that gave us the most accurate solutions.
+
+The hardest problem to solve with integrating Sigma into an equation was where the input value for the equation $(x)$ should go. We quickly dismissed the possibility that it should go in the lower bound. The point at which string begins getting added to the reel does not change; it is fixed. But between the other two options, we could not decide. It called for some more in-depth research of Sigma. We tried looking through websites for explanations of what each part of the function meant and what changing them would do, but for some reason there really is not much information out there on the summation function. So, we resorted to trial and error on Desmos to see what changes to Sigma would affect which parts of the graph. However, unfortunately Desmos really struggles with the summation function. It takes a very long time to load changes and show them in the graph, so that really slowed us down. But eventually, we were able to form a semi-solid understanding of Sigma. In our case, the function on the right of Sigma would include the thickness of the string, because that is what is being added each rotation. And because the thickness of the string is constant, $x$ definitely cannot be included there. But, $x$ fits perfectly into the upper bound of the Sigma function. This is because the number of rotations defines how many layers of string is being added. So, the upper bound of the Sigma equation is the number of rotations, or $x$ times the number of reel rotations per second. By plugging in the specific values for the TATULA TYPE-R rod, we got this equation:
+
+$$f(x) = \frac{(32.4x)33.9}{8.1} + (\sum_{n=1}^{32.4x} (.018\pi)(n-1))
+$$
+
+We put this equation into Desmos, and after waiting for it to load, we tested some points that we knew had to be on the graph after finding them by hand. Lo and behold, the equation worked. After talking it over, we agreed that this was the correct equation.
+
+After finding the equation for the TATULA TYPE-R rod, we used it to formulate the other 3 equations by replacing the numbers so that they are those of the proper rod. This saved a lot of time, and proved to be very effective. This also allowed us to find a general equation by replacing the numbers with words describing what each value meant. This general equation was incredibly useful because it gave us the ability to plug in the variables for any fishing rod and find its function.
+
+
+\begin{center}
+\caption{General Equation:}
+\end{center}
+$$((\frac{\text{reel revs}}{\text{sec}} \cdot x) \cdot \frac{\text{inches/handle rev}}{\text{gear ratio}} + (\sum_{n=1}^{\text{reel revs/sec} \cdot x} (2\pi \cdot \text{width})(n-1))
+$$
+
+
+
+The general formula consists of two parts that are added together. The first part calculates the string reeled in based off of just the initial circumference. When you multiply the reel revolutions per second by the number of seconds passed, you get the number of completed revolutions. The inches per each handle rotation divided by the gear ratio is the circumference of the reel without any string on it. Multiplying these together will give you the amount of string that has been pulled in by reel rotations, excluding any string pulled in by added circumference from previous string wraps. The second part uses Sigma, a summation function that adds all of the previous values computed by the formula. The upper bound of Sigma is the number of revolutions made by the reel, because the width of the string needs to be added for every rotation made. The value that n is set equal to in the lower space is 1 because string only begins to be added to the radius of the reel after a full rotation has been completed. The expression simply calculates the additional circumference added for every wrap. In the space to the right of Sigma, $n$ has to be subtracted by 1 because, again, there is no string added until a full revolution is completed. The string width multiplied by $2\pi$ is the added circumference that comes with each rotation of the reel. Multiplying that added circumference by $(n-1)$ gives you how much string has been pulled in by extra string added to the reel. Adding these two parts together will result in the total amount of string pulling in by the fishing rod.
+
+After finding the general equation, it became quite easy to find the other three equations. All we had to do was replace the words with the values that we found for each fishing rod at the start.
+
+\noindent
+\textbf{Equations of the Four Different Types of Fishing Reels:}
+
+$$
+\text{TATULA TYPE-R:} \hspace{1cm} f(x) = ((32.4x)33.9/8.1) + (\sum_{n=1}^{32.4x} (.018\pi)(n-1))
+$$
+$$
+\text{REV04 SX-HS:} \hspace{1cm} f(x) = ((29.2x)30/7.3) + (\sum_{n=1}^{29.2x} (.018\pi)(n-1))\\
+$$
+$$
+\text{Lew's Spin Reel:} \hspace{1cm} f(x) = ((24.8x)32/6.2) + (\sum_{n=1}^{24.8x} (.036\pi)(n-1))\\
+$$
+$$
+\text{Zebco Bullet Spincast Reel:} \hspace{1cm} f(x) = ((20.4x)29.6/5.1) + (\sum_{n=1}^{20.4x} (.0296\pi)(n-1))\\
+$$
+
+
+Then, we plugged these four equations into Desmos and looked for our answer, which would be a point on the graph. However, because our x-value is in terms of seconds and our y-value is in inches, we had some conversions to do. Because there are 12 inches in a foot and 5,280 feet in a mile, we multiplied the distance from the earth to the moon in miles by 12 and then by 5,280 to get the distance in inches. 238,855 miles is the same distance as 1,511,452,800 inches. Then, once we got our number in seconds, we had to multiply that by 3600 to get the answer in hours. The following times are how long it would take to reel in the moon with each fishing rod:
+
+\begin{center}
+    TATULA TYPE-R:  \textbf{5 hours, 28 minutes, and 13 seconds}\\
+    REV04 SX-HS:  \textbf{2 hours, 11 minutes, and 56 seconds}\\
+    Lew's Spin Reel:  \textbf{1 hour, 49 minutes, and 50 seconds}\\
+    Zebco Bullet Spincast Reel:  \textbf{2 hours, 27 minutes, and 15 seconds}
+\end{center}
+
+At first glance, these times seem absurdly short. How could it be that to reel in the moon it wouldn’t even take a quarter of a day? Well, the reason is rooted in how this problem was set up. We decided that for this investigation that the reels of our fishing rods would only be wide enough for one wrap of the string. Because of this, the circumference of the reel increases incredibly fast. So fast that, with the TATULA TYPE-R baitcasting rod, you manage to reel in about 18 miles of line on your last crank of the handle, just before the moon is fully reeled in.
+
+Unfortunately, it is not actually possible to reel in the moon with just a fishing rod from earth. The phrase \emph{“Moon on!”} will remain no more than a part of our imagination. However, the ideas that we used to find these hypothetical values are very applicable to things that are possible in the real world. Rotary motion is a concept that is used way more often than you would think. From ceiling fans to jet engine turbines, there are countless important things in our lives that require an understanding of rotary motion. Our team certainly learned a lot through this investigation, and it shows how even a seemingly impossible math problem can be solved with creativity and hard work.
+
+\pagebreak
+\begin{thebibliography}{8}
+
+\bibitem{} 
+https://www.daiwa.com/us/contents/reels/tatula/index.html
+
+\bibitem{}
+https://www.amazon.com/Abu-Garcia-Revo-Profile-Fishing/
+
+\bibitem{}
+https://fishingbooker.com/blog/types-of-fishing-reels/
+
+\bibitem{}
+https://patents.google.com/patent/US2282995A/en
+
+\bibitem{}
+https://patents.google.com/patent/US2541183A/en
+
+\bibitem{}
+https://patents.google.com/patent/US2634920
+
+\bibitem{}
+https://spaceplace.nasa.gov/moon-distance
+
+\bibitem{}
+https://www.varsitytutors.com/hotmath
+
+\end{thebibliography}
+
+\end{document}
