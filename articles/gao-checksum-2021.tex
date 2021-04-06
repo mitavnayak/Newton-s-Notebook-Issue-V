@@ -1,0 +1,33 @@
+\nnarticleheader{An Interesting Example of the Use of Checksum}{Gary Gao, Haverford '21}
+
+\noindent
+\textbf{A Story}
+
+	In an ancient kingdom, there was a tyrant king. One day, he caught two people who turned out to be magicians. The tyrant king wanted to kill them, but he magicians magically persuaded the king to agree to play a game with them. The king said, ``Tomorrow, I will have two hats ready. Each of them can be blue or red. I will have you sit down and face each other, and then put one hat on each of your heads, so you will only be able to see the color of the hat on the other person's head. After that, you will guess the color of the hat on your own head and you will say it out at the same time. If any of you two can guess correctly, I will let you go. Otherwise, you will die." The magicians agreed, and they have a night to discuss a strategy to increase their chances of winning. Is there a way for them to save themselves for sure?\\
+	\indent In fact, the strategy for them is quite simple. They can do the following: Magician 1 will say the color that is the same color as what he sees. Magician 2 will say the color that is different from what he sees. Because they have actually split the the 4 possibilities into two cases: Magician 1 bet that the color of their hats are the same; Magician 2 bet that the color of their hats are different. In this way, exactly one of them will guess correctly. Thus, they are saved.
+
+\noindent
+\textbf{A Generalization}
+
+	After seeing this story, we can try to solve this problem.
+	\begin{problem}
+		10 people stand on a circle. Each person has a hat on the head. Each hat can be any of the 10 given colors. Every person can see the hat on the head of all other people but not himself. They will guess the color of the hat on their own head. They will say their guesses out loud at the same time, but they are allowed to discuss strategy in advance. Can you guarantee that one of them will guess correctly?
+	\end{problem}
+	\begin{solution}	
+		We number the color with the integers from 0 to 9 and number the 10 people with the integers from 0 to 9 clockwise. Define $a_i$ to be the number corresponding to the color of the hat on the head of the $i$th person. And the strategy will be the following: Person $j$ will assume that $a_0+a_1+...+a_9 \equiv j \mod 10$ and calculate $a_k$ based on the color of other people's hats and $j$. In this way, the $k$th person will guess correctly, where $a_0+a_1+...+a_9 \equiv k \mod 10$, when calculated with the actual values.
+	\end{solution}
+	This is related to the concept of checksums, because in the strategy, every person's guess depends on this expression $(a_0+a_1+...+a_9)\mod 10$.
+
+\noindent	
+\textbf{Further Generalization}
+
+	Now that we have figured out the structure of this type of problems, we can aim for a more generalized, optimal conclusion.
+	\begin{problem}
+		$n$ people stand on a circle. Each person has a hat on the head. Each hat can be any of the $c$ given colors. Every person can see the hat on the head of all other people but not himself. They will guess the color of the hat on their own head. They will say their guesses out loud at the same time, but they are allowed to discuss strategy in advance. At most how many people can guess correctly for sure?
+	\end{problem}
+	\begin{solution}
+		Similar to our solution to problem 1, we can number the color with the integers from 0 to $c-1$. We will number the n people with the integers from 0 to $n-1$ clockwise. Define $a_i$  to be the number corresponding to the color of the hat on the head of the $i$th person. \\
+		The strategy will be the following: Person $j$ will assume that $a_0+a_1+...+a_{n-1} \equiv j \mod c$ and calculate $a_k$ based on the color of other people's hats and $j$. In this way, the $k$th person will guess correctly if $a_0+a_1+...+a_{n-1} \equiv k \mod c$ when calculated with the actual values. It is easy to see that the amount of people that is guaranteed to guess correctly is equal to $\lfloor \frac{n}{c} \rfloor$\\
+		We also want to prove that $\lfloor \frac{n}{c} \rfloor$ is the maximum. We can notice that among all the possible $c^n$ possibilities, each specific person can guess correctly $c^{n-1}$ times. This means the expected value of correct guesses from each person each time is $\frac{c^n}{c^{n-1}} = \frac{1}{c}$. By the linearity of expectation, the expected number of correct guesses each time is $n \cdot \frac{1}{c} = \frac{n}{c}$, which means there exist at least one situation where at most $\lfloor \frac{n}{c} \rfloor$ guesses correctly. So $\lfloor \frac{n}{c} \rfloor$ is the maximum amount we want.
+	\end{solution}
+	\indent We can see that checksums are very powerful in finding strategies for this kind of problems. For problems with more restrictions, it is also possible that we use more sophisticated checksum that can involve polynomial and more modular expressions.
