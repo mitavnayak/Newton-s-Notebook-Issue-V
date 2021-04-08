@@ -1,6 +1,8 @@
-\nnarticleheader{Quantum Physics and Symmetry}{Brian Williams, Haverford '21}
+\nnarticleheader{Exploring Symmetry in Quantum Physics}{Brian Williams, Haverford '21}
 
-\subsection*{Introduction}
+\noindent
+\textbf{Introduction}
+
 Humanity has always been drawn to symmetry, both in nature and in the structures we build ourselves. Perhaps our brains are wired to see beauty in symmetry, or maybe we just find practicality in order. Regardless of our reasons for liking symmetry, it seems that nature itself has its own affinity for it. Some symmetries arise naturally from the laws governing our universe, and some seem to give rise to laws of their own---especially in quantum physics. 
 
 But what exactly \emph{is} symmetry? What does it mean for a system to be symmetrical? Well, an object has a symmetry if when you do something to it---move it, turn it, flip it---it looks the same after you're done with it. For example, a butterfly looks symmetrical because when you reflect it across its $y$-axis, it's hard to tell that anything has changed. More specifically, it has a particular \emph{symmetry corresponding to that transformation}.
@@ -27,9 +29,10 @@ which upon plugging in the two momentum variable substitutions we didn't use bef
 \begin{align*}
     \mathscr{H} = T + V.
 \end{align*}
-As you can see, it's just the sum of the total kinetic and potential energy. Despite its seemingly simple form, it contains all the information about how a system behaves, or changes over time.\footnote{Classically, one can use a set of equations called the \emph{canonical equations} to do this. This is called the \emph{Hamiltonian formalism}, as opposed to the Newtonian approach which uses Newton's three laws, including $F = ma$, to figure out how a system behaves.} So here's the key point: when a transformation leaves the Hamiltonian invariant, the \emph{behavior of the system} is left invariant.
+It's really just a fancy name for the sum of the total kinetic and potential energy. Despite its seemingly simple form, it contains all the information about how a system behaves, or changes over time.\footnote{Classically, one can use a set of equations called the \emph{canonical equations} to do this. This is called the \emph{Hamiltonian formalism}, as opposed to the Newtonian approach which uses Newton's three laws, including $F = ma$, to figure out how a system behaves.} So here's the key point: when a transformation leaves the Hamiltonian invariant, the \emph{behavior of the system} is left invariant.
 
-\subsection*{Transformations in quantum mechanics}
+\noindent
+\textbf{Transformations in Quantum Mechanics}
 
 In order to examine transformations in quantum mechanics---which are a bit more abstract than just substituting variables---we'll need some notation. Let $A$ be some abstract transformation, which we could apply to some abstract object represented by the symbol $|v\rangle$ (pronounced ``ket v''). For example, $A$ could be the rotation of some object by 90 degrees (about the $z$-axis) and $|v\rangle$ could be the butterfly we were talking about before. After being acted upon by the rotation $A$, the butterfly will end up in a new rotated state $|v'\rangle$:
 \begin{center}
@@ -40,7 +43,7 @@ In order to examine transformations in quantum mechanics---which are a bit more 
             \draw[black, thin] (-0.4\textwidth,0) -- (0.4\textwidth,0);
             \draw[black, thin] (0,-0.4\textwidth) -- (0,0.4\textwidth);
             \node (butterfly) at (0,-0.035\textwidth) 
-            {\includegraphics[width=.45\textwidth]{butterfly.png}};
+            {\includegraphics[width=.45\textwidth]{williams_butterfly.png}};
             \node (ket) at (0.25\textwidth, 0.25\textwidth) {$|v\rangle$};
         \end{tikzpicture}
     \end{minipage}
@@ -58,7 +61,7 @@ In order to examine transformations in quantum mechanics---which are a bit more 
             \draw[black, thin] (-0.4\textwidth,0) -- (0.4\textwidth,0);
             \draw[black, thin] (0,-0.4\textwidth) -- (0,0.4\textwidth);
             \node (butterfly) at (0.03\textwidth,0)
-            {\includegraphics[width=.45\textwidth, angle=90]{butterfly.png}};
+            {\includegraphics[width=.45\textwidth, angle=90]{williams_butterfly.png}};
             \node (ket) at (0.25\textwidth, 0.25\textwidth) {$|v'\rangle$};
         \end{tikzpicture}
     \end{minipage}
@@ -68,7 +71,9 @@ To show this relation, we write
     A|v\rangle = |v'\rangle.
 \end{align*}
 
-This bracket-based notation, quite imaginatively called bra-ket notation, is common in quantum mechanics.\footnote{Although we don't need it here, I might as well add that there's another symbol called a ``bra'' which looks like $\langle v|$.} We haven't really defined what $A$ and $|v\rangle$ mean mathematically, but for these purposes it's probably better to think of them just in terms of what they represent. Formally, $A$ is called an \emph{operator} and $|v\rangle$ is a \emph{vector}.\footnote{But try not to think of $|v\rangle$ as a vector like an arrow in space, like you usually do. Although it is a vector, it doesn't have three components representing its position or anything like that since it's more abstract than that.} In quantum mechanics, a statevector like $|v\rangle$ represents a particular state of the system ($|\psi\rangle$ is most commonly used for some arbitrary state). The whole system itself is represented by some Hamiltonian \emph{operator} $H$, similar in structure to the Hamiltonian function $\mathscr{H}$ we looked at before. For example, an isolated hydrogen atom has some particular $H$ which doesn't change in structure over time. On the other hand, the state of the system $|\psi\rangle$, which we could use to find the probabilities of the electrons in certain positions, will change over time.
+This bracket-based notation, quite imaginatively called bra-ket notation, is common in quantum mechanics.\footnote{I might as well add that there's another symbol called a ``bra'' which looks like $\langle v|$. If you're familiar with linear algebra, $\langle v|$ is the conjugate transpose of $|v\rangle$.} We haven't really defined what $A$ and $|v\rangle$ mean mathematically, but for these purposes it's probably better to think of them just in terms of what they represent: a transformation and an object being transformed. Formally, $A$ is called an \emph{operator} and $|v\rangle$ is actually a \emph{vector}.\footnote{But try not to think of $|v\rangle$ as a vector like an arrow in space, like you usually do.} In quantum mechanics, a \emph{statevector} like $|v\rangle$ or $|\psi\rangle$ represents a particular state of the system (the Greek letter $\psi$ ``psi'' is most commonly used for some arbitrary state). For example, $|\psi_0\rangle$ could represent an electron bound to a proton, while $|\psi_1\rangle$ could represent the same electron that just got released some time later.
+
+Before moving on, I'd like to emphasize the difference between the dynamics of a system and a particular state of a system. When we considered the rotation of the hydrogen atom, we looked at a symmetry of the \emph{dynamics} of the system. The Hamiltonian didn't change, so the electron still moves in the same way we'd expect. But (if we imagine the electron as a classical particle with definite position) the position of the electron still changed after the rotation. In quantum mechanics, the dynamics of the whole system itself are represented by some Hamiltonian \emph{operator} $H$, similar in structure to the Hamiltonian function $\mathscr{H}$ we looked at before. An isolated hydrogen atom has some particular $H$ which dictates how the system changes over time. On the other hand, the state of the system $|\psi\rangle$ will change over time depending on $H$. As we will see, however, we can look at how a statevector is affected by transformations to reveal transformations regarding the dynamics of the whole system.
 
 Now we have the tools we need to analyze transformations in quantum mechanics. Some examples of transformations you've probably seen are spatial translations, rotations, and reflections, as mentioned above. We can use specific operators for these, like $T(\mathbf{a})$ (to translate the state by the vector $\mathbf{a}$), $R_x(\theta)$ (for a rotation by $\theta$ around the $x$-axis), and $\Pi$, respectively. The $\Pi$ operation is commonly called a \emph{parity} transformation. Here's an example of what a translation operator would look like for a one-dimensional system, where we only consider the $x$-direction:
 \begin{align*}
@@ -107,13 +112,15 @@ But since this is a symmetry of the system, not this particular state, we only n
 \end{align*}
 to mean that our system has a symmetry corresponding to $A$.
 
-Although it might be tempting to think that $AU(t) = U(t)A$ no matter the scenario, this isn't always the case. All natural laws, like the electromagnetic, weak nuclear, and strong nuclear forces, are invariant under space and time translations. The weak force, however, isn't invariant under \emph{parity} transformations. This force is responsible for radioactive beta decay. In 1956, physicist Chien-Shiung Wu performed an experiment with the following beta decay in cobalt-60:
+Although it might be tempting to think that $AU(t) = U(t)A$ no matter the scenario, this isn't always the case. All natural laws, like the electromagnetic, weak nuclear, and strong nuclear forces, are invariant under space and time translations. The weak force, however, isn't invariant under parity transformations. This force is responsible for radioactive beta decay. In 1956, physicist Chien-Shiung Wu performed an experiment with the following beta decay in cobalt-60:
 \begin{align*}
     ^{60}\text{Co} \rightarrow\: ^{60}\text{Ni} + e^- + \Bar{\nu}
 \end{align*}
 where $e^-$ is an electron and $\Bar{\nu}$ is an antineutrino. She found that the electrons had a preferred direction in which they'd decay, opposite the spin $^{60}\text{Co}$, leading to the conclusion that parity symmetry was \emph{violated}. So although this is a situation in which there's a lack of symmetry, this actually helps us understand the universe better---nature treats a completely mirrored version of the universe differently than a non-mirrored one, contrary to what you might expect.
 
-\subsection*{Conservation laws}
+\noindent
+\textbf{Conservation Laws}
+
 In 1918, mathematician Emmy Noether proved a theorem linking continuous symmetries to \emph{conserved quantities}. A conserved quantity is one that doesn't change over time---for example, if the momentum of a system is conserved, then the system should have the same momentum after waiting for a little while:
 \begin{align*}
     \frac{dp}{dt} = 0.
@@ -122,7 +129,7 @@ This theorem, which applies to both classical and quantum systems, is extremely 
 \begin{theorem}[Noether's theorem]
 Every continuous symmetry in a system corresponds to a conserved quantity.
 \end{theorem}
-Without getting into the proof, here are the relationships from the continuous symmetries we've looked at:
+Here are the relationships from the continuous symmetries we've looked at:
 \begin{center}
     \begin{tabular}{|c|c|c|}
     \hline
@@ -138,7 +145,8 @@ The first two might look like they make sense, but the third isn't immediately o
 
 Since our hydrogen atom had rotational symmetry, we can use Noether's theorem to reason that if the system isn't tampered with, the angular momentum of a state shouldn't change over time. This is a nice way to skip some calculations, but it's also possible to go the other way: it's possible to take a variable, like position or energy, and derive, or \emph{generate} a transformation operator from it. Variables in quantum mechanics like position and momentum also happen to be represented by operators, such as $X$ and $P$, which can be used to generate the translation and rotation operators. We won't go into the details since that gets into some technical linear algebra, but just knowing the relationship between symmetries and conserved quantities is a key part of understanding symmetries in quantum mechanics and physics in general.
 
-\subsection*{Energy levels}
+\noindent
+\textbf{Energy Levels}
 
 For a system with a Hamiltonian $H$, there are certain states $|E\rangle$ with definite energies $E$:
 \begin{align*}
@@ -158,14 +166,17 @@ When a Hamiltonian is symmetrical under a bunch of related transformations, like
 
 \begin{wrapfigure}{r}{0.25\textwidth}
     \centering
-    \includegraphics[width=0.2\textwidth]{ammonia.png}
+    \includegraphics[width=0.2\textwidth]{williams_ammonia.png}
 \end{wrapfigure}
 
 It turns out that if a Hamiltonian is symmetrical under a certain group, then all of the states corresponding to one energy level are related to this group through a specific set of matrices, known as a \emph{representation} of the group. By knowing that set of matrices, not only do you have a way to figure out which states might belong to the same energy level, but it's also possible to figure out how much that energy level might split after a perturbation.
 
-\subsection*{Conclusion}
+\noindent
+\textbf{Conclusion}
+
 A lot of the topics here (groups, Hamiltonian mechanics, conservation laws) could be discussed for much longer on their own, but the goal was to give an introduction to the roles they each play in understanding symmetry in quantum mechanics. Groups play a significant role in many aspects of quantum physics from the structure of molecules to the way the operators representing variables behave with each other. They play an even larger role in quantum field theory, to the point where the Standard Model---the theory of elementary particles including the electromagnetic, weak, and strong forces---can be described using a special symmetry group. 
 
-Using symmetry laws are valuable because---in contrast to approximations---the information we can derive from knowing the symmetries is \emph{exact}. Understanding symmetry, both in everyday life and in quantum mechanics, can make objects much easier to understand. Symmetries can also help us figure out the underlying laws dictating our world---though as we saw before with Wu's Cobalt-60 experiment, some symmetries can be broken. Interestingly, a theorem called the CPT theorem says that under simultaneous charge conjugation (switching all particles with their antiparticles), parity, and time-reversal, the laws of our universe \emph{shouldn't} change.
+Symmetry laws are valuable because---in contrast to approximations---the information we can derive from knowing the symmetries is \emph{exact}. Understanding symmetry, both in everyday life and in quantum mechanics, can make objects much easier to understand. Symmetries can also help us figure out the underlying laws dictating our world---though as we saw before with Wu's Cobalt-60 experiment, some symmetries can be broken. Interestingly, a theorem called the CPT theorem says that under simultaneous charge conjugation (switching all particles with their antiparticles), parity, and time-reversal, the laws of our universe \emph{shouldn't} change.
 
 Once you've gotten a feel for the role that symmetries play in physics, it's really a matter of wondering why all of these symmetries exist, and why they're so appealing. Artists and architects often use symmetry to guide their works. Physicists often use symmetry to discover the laws governing our world. But do these symmetries appear by chance, emerging out of pure convenience? Or does nature itself, with its most fundamental laws, see the beauty in symmetry?
+
