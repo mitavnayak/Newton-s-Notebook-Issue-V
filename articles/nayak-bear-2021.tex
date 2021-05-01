@@ -1,7 +1,9 @@
+\nnarticleheader{\emph{How to Solve It} and the Bear Riddle}{Mitav Nayak, Haverford '22}
+
 \noindent
 \textbf{Introduction}
 
-The following riddle was taken from \emph{How to Solve It}, a famous book describing the mathematical method by George Pólya. It was published in 1945, and it describes four steps one can take when problem solving:
+The riddle in this article was taken from \emph{How to Solve It}, a famous book describing the mathematical method by George Pólya. It was published in 1945, and it describes four steps one can take when problem solving:
 
 \begin{enumerate}
    \item Understanding the Problem
@@ -40,10 +42,18 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
   
    While the first question posed will be important in the solution, it is not the unknown. Rather, the unknown is the color of the bear. The bear’s travel and directions traveled are data, not the unknown.
    
-   To understand the problem, we can also draw a figure.
+   To understand the problem, we can also draw a figure:
    
-   %figure
+   \begin{figure}[htp]
+    \centering
+    \begin{minipage}{6cm}
+    \includegraphics[width=6cm]{nayakb_image1}
+    \caption{An initial attempt at drawing a figure.}
+    \label{fig:1}
+    \end{minipage}
+\end{figure}
 
+\pagebreak
    \item Devising a Plan
    
    If we have seen a similar problem we may consider that. If not, we can try to connect the data to the unknown. We can pose the following questions:
@@ -57,12 +67,39 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    
    \item Carrying Out the Plan
    
-   %figure
-   %figure
-   %figure
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{nayakb_image1}
+     \caption{A general illustration of the problem.}\label{Fig:1}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{nayakb_image2}
+     \caption{Point \emph{P} is near the equator.}\label{Fig:2}
+   \end{minipage}
+\end{figure}
+
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{nayakb_image3}
+     \caption{Point \emph{P} is 1 mile north of the South Pole.}\label{Fig:Data1}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{nayakb_image4}
+     \caption{Point \emph{P} is at the North Pole.}\label{Fig:Data2}
+   \end{minipage}
+\end{figure}
    
    Based on our North Pole figure, we have found where it may be possible for the bear to end up at the same point. We know that bears at the North Pole are white, and this is our answer to the riddle.
 
+
+
+   \pagebreak
+   
+   \vspace*{0.5cm}
    
    \item Looking Back
    
