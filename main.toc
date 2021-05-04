@@ -1,17 +1,20 @@
 \babel@toc {english}{}
 \contentsline {part}{Pure Mathematics}{5}{figure.caption.2}%
-\contentsline {section}{Gabriel’s Horn Paradox\newline Mitav Nayak, Haverford '22}{6}{section*.3}%
-\contentsline {section}{Impartial Games and the Sprague-Grundy Theorem\newline Gary Gao, Haverford '21}{10}{figure.caption.7}%
-\contentsline {section}{Pigeonhole Principle\newline Will Vauclain, Haverford '19, University of Pennsylvania '23}{17}{figure.caption.8}%
-\contentsline {section}{Four Proofs of Euler's Identity\newline Elise Kait, Baldwin ‘21}{19}{figure.caption.8}%
+\contentsline {section}{An Interesting Example of the Use of Checksum\newline Gary Gao, Haverford '21}{6}{section*.3}%
+\contentsline {section}{Random Variables\newline Adamya Aggarwal, Haverford '22}{10}{figure.caption.7}%
+\contentsline {section}{Foundations of Mathematics: Part II\newline Dr. Mark Gottlieb, Haverford Faculty}{17}{figure.caption.8}%
 \contentsline {part}{Applied Mathematics}{27}{figure.caption.15}%
-\contentsline {section}{Foundations of Mathematics: Part I\newline Dr. Mark Gottlieb, Haverford Faculty}{28}{section*.16}%
-\contentsline {section}{Plato and the Philosophical Value of Geometry\newline Mickey Fairorth, Haverford '19, St. Charles Borromeo Seminary}{36}{dfninner.0.4.1}%
-\contentsline {part}{Applied Mathematics}{39}{figure.caption.18}%
-\contentsline {section}{A ‘Spin’ on Modeling Propeller Movement\newline Kieran Dias-Lalcaca, Elijah Lee, and Ryan Ngo, Haverford '20}{40}{section*.19}%
-\contentsline {section}{Lagrange Points: Solving for Gravitational Parking Spaces\newline Alexander Greer, Haverford '20}{50}{figure.caption.24}%
-\contentsline {section}{Team $\#$14169 M3 Challenge Submission: Keep on Trucking\newline Alexander Greer '20, Gary Gao '21, and Xiaolong Huang '21}{56}{figure.caption.27}%
-\contentsline {part}{Applied Science}{64}{figure.caption.28}%
-\contentsline {section}{tDCS and rTMS: Promising Treatments for Alzheimer’s\newline Carson DeMarco, Haverford '20}{65}{section*.29}%
-\contentsline {section}{The Root of Consciousness and Mapping the Brain\newline Alexander Greer, Haverford '20}{69}{figure.caption.30}%
-\contentsline {section}{A Model of Shear-Induced Fibrillogenesis\newline Dr. Holly M Golecki, Professor, University of Illinois at Urbana-Champaign}{73}{figure.caption.30}%
+\contentsline {section}{Oligopoly and Game Theory\newline Mitav Nayak, Haverford '22}{28}{section*.16}%
+\contentsline {section}{Polar Art\newline Joey Kauffman, Haverford '23}{36}{dfninner.0.4.1}%
+\contentsline {section}{Fishing Reels Investigation\newline Colin Kelly, Kiran Mistry, and Roch Parayre, Haverford '23}{36}{dfninner.0.4.1}%
+\contentsline {section}{Putting a Spin on the Average Bike\newline Jaiden Shuchman, Jay Crowther, and Ryan Davey, Haverford '23}{36}{dfninner.0.4.1}%
+\contentsline {part}{Applied Science}{39}{figure.caption.18}%
+\contentsline {section}{Exploring Symmetry in Quantum Physics\newline Brian Williams, Haverford '21}{40}{section*.19}%
+\contentsline {section}{The Beauty of Newton’s First Law of Motion\newline Mitav Nayak, Haverford '22}{50}{figure.caption.24}%
+\contentsline {section}{The Fermi Paradox: Are We Alone?\newline Matthew Wang, Haverford '21}{56}{figure.caption.27}%
+\contentsline {part}{Math Modeling}{64}{figure.caption.28}%
+\contentsline {section}{Math Modeling Solution Paper Team 15202\newline Nathan Tai '21, Brian Williams '21, Mitav Nayak '22, Jeffrey Yang '22, Bram Shorck '22}{65}{section*.29}%
+\contentsline {section}{Math Modeling Solution Paper Team 15201\newline Gary Gao '21, Julius Huang '22, Elijah Lee '22, Adamya Aggarwal '22, Samuel Kohl '22}{69}{figure.caption.30}%
+\contentsline {part}{Mathematical Brainteasers}{64}{figure.caption.28}%
+\contentsline {section}{\emph{How to Solve It} and the Bear Riddle\newline Mitav Nayak, Haverford '22}{73}{figure.caption.30}%
+\contentsline {section}{The Missing Dollar Problem\newline Adamya Aggarwal, Haverford '22}{73}{figure.caption.30}%
