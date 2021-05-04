@@ -1,20 +1,6 @@
 \nnarticleheader{Math Modeling Solution Paper Team 15201}{Gary Gao '21, Julius Huang '22, Elijah Lee '22, Adamya Aggarwal '22, Samuel Kohl '22}
 
-
-
-	\section*{The Problem}
-		\includegraphics[width=\textwidth]{M3ChallengeProblem_2021.pdf}
-
-\title{Math Modeling Solution Paper Team 15201}
-\author{Adamya Aggarwal, Elijah Lee, Julius Huang, Sam Kohl, Gary Gao}
-\date{March 1, 2021}
-\maketitle
- 
-\onehalfspacing
-
-In this year's math modeling contest, ten Fifth Formers and Sixth Formers formed two teams and produced two papers in the 14-hour period. Below is the selected parts of the solution submitted by team 15201.
-
-\section{Executive Summary}
+\section*{Executive Summary}
 
 	As technology develops, the impetus on governments and companies to provide widely accessible wifi solutions grows higher and higher; in many ways, your access to high-speed internet defines your lifestyle: in fact, many organizations, such as the U.N., define access to the internet as a human right. This reality has only been exacerbated by the COVID-19 pandemic- many students of disadvantaged socioeconomic backgrounds found themselves driving to parking lots and restaurants to learn virtually from a hotspot. Seeing this information, we are presented with the challenge of three problems: firstly, we have to predict pricing trends for different levels of bandwidth over the next ten years; secondly, we are asked to predict a family’s bandwidth needs based on certain characteristics; finally, we will develop a model optimally placing cell towers in three different regions, ensuring adequate coverage for all citizens based on their needs.\\
 	\indent For the first problem, we used given and researched data to perform a multi-linear regression. This method will be further discussed later. We tested a couple of hypothetical factors that we think may affect the price of the Internet Plan and yield different results. \\
@@ -22,7 +8,7 @@ In this year's math modeling contest, ten Fifth Formers and Sixth Formers formed
 	\indent For the third, we equated the given problem to the “maximal covering location problem” (MCLP). From there, we found our solution using the MCLP, and visualized it with a python simulation and data visualization. 
 
  
-\section{Solution to The Third Problem}
+\section*{Mobilizing Mobile}
 	\subsection{Problem Redefined}
 	Q3 asks us to find an optimal plan to place cell towers in a region and then demonstrate accuracy in the three hypothetical regions provided.
 		
@@ -100,7 +86,7 @@ In this year's math modeling contest, ten Fifth Formers and Sixth Formers formed
 	\item Using the MCLP may not be the most accurate because the solution to this problem, i.e. the minimum number of facilities required for total coverage, may exceed the affordable budget for infrastructure investment. If the budgetary constraint is incorporated in the model, then the objective would be to minimize the maximal service distance S.
 	\end{itemize}
 	
-\section{Appendix: Code}
+\section*{Appendix: Code}
 	Simulation and MCLP Solver by Elijah Lee.\\
 	\indent Note: MCLP solver adapted from https://github.com/cyang-kth/maximum-coverage-location\\
 	\indent Note: run \verb|generate_random()| to generate a random distribution and save it for repeatability
