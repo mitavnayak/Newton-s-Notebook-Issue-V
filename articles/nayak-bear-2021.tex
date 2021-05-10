@@ -44,6 +44,9 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    
    To understand the problem, we can also draw a figure:
    
+   \vspace{1cm}
+   
+   \renewcommand{\thefigure}{1}
    \begin{figure}[htp]
     \centering
     \begin{minipage}{6cm}
@@ -67,6 +70,7 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    
    \item Carrying Out the Plan
    
+   \renewcommand{\thefigure}{2}
 \begin{figure}[!htb]
    \begin{minipage}{0.48\textwidth}
      \centering
@@ -75,11 +79,13 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    \end{minipage}\hfill
    \begin{minipage}{0.48\textwidth}
      \centering
+     \renewcommand{\thefigure}{3}
      \includegraphics[width=.9\linewidth]{nayakb_image2}
      \caption{Point \emph{P} is near the equator.}\label{Fig:2}
    \end{minipage}
 \end{figure}
 
+\renewcommand{\thefigure}{4}
 \begin{figure}[!htb]
    \begin{minipage}{0.48\textwidth}
      \centering
@@ -88,18 +94,17 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    \end{minipage}\hfill
    \begin{minipage}{0.48\textwidth}
      \centering
+     \renewcommand{\thefigure}{5}
      \includegraphics[width=.9\linewidth]{nayakb_image4}
      \caption{Point \emph{P} is at the North Pole.}\label{Fig:Data2}
    \end{minipage}
 \end{figure}
-   
+
+
+\pagebreak
    Based on our North Pole figure, we have found where it may be possible for the bear to end up at the same point. We know that bears at the North Pole are white, and this is our answer to the riddle.
 
-
-
-   \pagebreak
-   
-   \vspace*{0.5cm}
+ 
    
    \item Looking Back
    
@@ -107,7 +112,7 @@ After looking at this problem, we may be initially confused. Firstly, how can a 
    
 \end{enumerate}
 
-\pagebreak
+
 \begin{thebibliography}{1}
 
 \bibitem{} 
