@@ -1,18 +1,17 @@
 \nnarticleheader{Math Modeling Solution Paper Team 15202}{Nathan Tai '21, Brian Williams '21, Mitav Nayak '22, Jeffrey Yang '22, Bram Shorck '22}
 
-
-\section{Executive Summary}
+\section*{Executive Summary}
     \indent Many aspects of human life have declined as a result of the pandemic, but one industry which has surged higher than ever in recent weeks is internet connectivity. However, this great fortune of revolutionary communication has been unequally distributed across the country. Low income families continue to struggle to acquire internet access; the consequences of such are even vastly more severe in a remote environment. There is good news, though; past data shows a rapid exponential decrease in the price of data (calculated in megabits per second per United States Dollar) and futuristic connections are being enjoyed by a wider audience than ever before. The trend shows no sign of stopping in the future, and a stable internet connection will soon be a staple like water. But like water, not everyone gets it, and everyone needs different amounts for different things. As the internet becomes more widespread and important, the allocation and distribution methods must adapt and develop complexity to meet the evolving needs of the community. The answer to that question must start with these needs. Before these needs are satisfied, however, the primary focus should be the establishment of its basic resource. Water coverage is great, but it is incomplete, and with internet connection, society has an opportunity to learn from its mistakes. Currently, it is repeating these mistakes with vast swaths of land in digital darkness or stuck with primitively incompatible artifacts which serve as no more than decoration. A perfect model should distribute cellular nodes to cover the entire land, not just the densely populated metro areas. \\
 	\indent The first prompt poses a question surrounding the cost of bandwidth; specifically, how this cost will change over the next 10 years. To address the prompt, data for the price of internet and download speed were gathered and leveraged to make calculations and predictions. The models that were created in this prompt—one for the United States and one for the United Kingdom— suggested that the cost per unit of bandwidth have been and will continue to decrease exponentially. The model for the US predicts that price per Mbps will be about 0.70 dollars by the year 2031. \\
 	\indent Internet usage requirements based on specific parameters are asked by the second prompt. By creating and defining parameters and values to generate a model that calculates internet consumption rates based on general age ranges, an accurate estimation of internet consumption can be generated for a diverse collection of individuals.\\
 	\indent The third prompt requires a pattern of cellular node distribution based on several variables such as population density and income to accurately and effectively serve the internet needs of a region. The model calculates the ideal placement of cellular nodes within subregions, either one larger mid-speed node or four high-speed nodes. For example, Region C from the given data could be given total coverage using 12 high-speed nodes and four mid-speed nodes. The model calculated the most efficient spacing and the needed nodes to handle the peak bandwidth a densely populated area uses. 
 
  
-\section{The Cost of Connectivity}
-	\subsection{Defining the Question}
+\section*{The Cost of Connectivity}
+	\subsection*{Defining the Question}
 	Develop a model to determine the cost per unit of bandwidth in dollars or pounds per Mbps over the next 10 years for consumers in the United States and the United Kingdom.
 		
-	\subsection{Assumptions}
+	\subsection*{Assumptions}
 	\begin{enumerate}
    \item The entire population of the United States is covered by the data for the United States; the entire population of the United Kingdom is covered by the data for the UK.
    \begin{itemize}
@@ -28,7 +27,7 @@
    \end{itemize}
 \end{enumerate}
 
-	\subsection{Variables}
+	\subsection*{Variables}
 
 	\begin{center} \begin{tabular} {|c|c|}
 		\hline
@@ -47,8 +46,8 @@
 	\end{tabular} \end{center}
 
 
-	\subsection{Developing the Model}
-	\subsubsection{Part I: United States}
+	\subsection*{Developing the Model}
+	\subsubsection*{Part I: United States}
 %	\noindent \textbf{Part I: United States}
 
 	With data from the NCTA [1] from past years, an exponential regression model was created which could be used to extrapolate the future prices of internet consumption ($P_M$). The data included certain years and the Price per Mbps during that year.
@@ -67,7 +66,7 @@
     \end{tabular}
     \end{center}
 	
-	
+	\renewcommand{\thefigure}{1}
     \begin{figure}[htp]
     \centering
     \begin{minipage}{9cm}
@@ -108,7 +107,7 @@ Time (years after 1998)   & Price per Mbps ($P_M$)   & \% decline  \\ \hline
 
     \end{center}
 	
-	
+	\renewcommand{\thefigure}{2}
 	\begin{figure}[htp]
     \centering
     \begin{minipage}{9cm}
@@ -136,7 +135,7 @@ Time (years after 1998)   & Price per Mbps ($P_M$)   & \% decline  \\ \hline
 \end{tabular}
 \end{center}
 	
-    \subsubsection{Part II: United Kingdom}
+    \subsubsection*{Part II: United Kingdom}
     
     Price data on monthly internet plans for the United Kingdom were provided by data sets in D3. These monthly prices provided in a year were averaged to calculate a singular monthly value that could be used for all months in that given year. This method was used to find the prices for months in years from 2014 to 2019.
 
@@ -144,6 +143,7 @@ Time (years after 1998)   & Price per Mbps ($P_M$)   & \% decline  \\ \hline
 
     To find the prices from years 2010 through 2013, a linear model was created from the price data based on year.
 
+    \renewcommand{\thefigure}{3}
 	\begin{figure}[htp]
     \centering
     \begin{minipage}{9cm}
@@ -177,7 +177,7 @@ Time (years after 1998)   & Price per Mbps ($P_M$)   & \% decline  \\ \hline
 \newcommand{\black}{\color{black}}
 The above data table shows the values used for the final UK model. The numbers in \blue blue \black were extrapolated.
 
-
+    \renewcommand{\thefigure}{4}
     \begin{figure}[htp]
     \centering
     \begin{minipage}{9cm}
@@ -189,8 +189,8 @@ The above data table shows the values used for the final UK model. The numbers i
     \end{figure}
    
    \pagebreak
-   \subsection{Executing the Model}
-   \subsubsection{Part I: United States}
+   \subsection*{Executing the Model}
+   \subsubsection*{Part I: United States}
    The model that was built for the United States utilized the equation $y = 31.869e^{-0.204x}$. The independent variable is the number of years after 2000, and the dependent variable is $P_M$. By plugging in values from 20 to 30, the cost per unit of bandwidth per Mbps can be found in any of the next 10 years.
    
    \begin{center}
@@ -212,7 +212,7 @@ x                          & y                                  \\ \hline
 \end{tabular}
 \end{center}
     
-    \subsubsection{Part II: United Kingdom}
+    \subsubsection*{Part II: United Kingdom}
     The model built for the UK utilized the equation $y = 13.115e^{-0.265x}$. The independent variable is the number of years after 2010, and the dependent variable is $P_M$. By plugging in values from 10 to 20, the cost per unit of bandwidth per Mbps (monthly) can be found in any of the next 10 years.
     
     \begin{center}
@@ -236,8 +236,8 @@ x                            & y                                    \\ \hline
     
     
 
-    \subsection{Results and Discussion}
-    \subsubsection{Strengths and Weaknesses}
+    \subsection*{Results and Discussion}
+    \subsubsection*{Strengths and Weaknesses}
 
     The exponential regression model provides a superior estimate based on past data used to extrapolate into the future. Its simplicity reduces the background effects of minor variables while still allowing them to affect data through past values. The R-squared values of the models are extremely high, suggesting a level of confidence in the model. However, future predictions are seldom accurate and perfect accuracy is impossible to achieve with predictive models.
 
@@ -245,16 +245,19 @@ x                            & y                                    \\ \hline
 
     The data for the second model comes from 8 data points taken over the course of 7 years. In an ideal model, the time frame may need to be lengthened to improve accuracy and decrease variability in the data. There are further limitations to this model because the invention of the internet is relatively recent, and data on internet traffic in its early days is limited.
 
-    \subsubsection{Sensitivity Analysis}
+    \subsubsection*{Sensitivity Analysis}
     Since both of the models model were found by dividing price by download speed, these two parameters can be found in this equation:
     
     $$P_M(t)=\frac{P(t)}{s(t)}$$
     
     It was found that $P_M(t)$ experiences exponential decay as time increases. The data for $P_D(t)$ showed that the price decreased slightly over time. For $P_P(t)$, the model showed that the price was decreasing linearly. $S(t)$, the download speed, generally varies with internet speeds. Since internet speeds have increased dramatically and exponentially over the last 20 years, the finding that $P_M(t)$ decreases exponentially makes mathematical sense. If a parameter—$P(t)$, for example—was to change slightly, it would not have a significant effect on the model. However, if the behavior of $P(t)$ or $s(t)$ in a fundamental way, the model would no longer be accurate.
 
-
 \pagebreak
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
+
+\bibitem{} 
+R. Lake and A. Makori, "The Digital Divide Among Students During COVID-19: Who Has Access? Who Doesn’t?," 16 June 2020. [Online]. Available: https://www.crpe.org/thelens/digital-divide-among-students-during-covid-19-who-
+has-access-who-doesnt.
 
 \bibitem{} 
 https://www.ncta.com/industry-data
