@@ -1,277 +1,33 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[leqno]{amsmath}
-\usepackage{amssymb}
-%\usepackage{units}
-\usepackage{wallpaper}
-\usepackage{newtons-notebook}
-\usepackage{booktabs}
-\usepackage{float}
-\usepackage{xurl}
-\usepackage{listings}
-%\usepackage{tocloft}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-
-\usepackage{tabu}
-%\usepackage{multirow}
-\usepackage{array}
-
-\usepackage[english]{babel}
-\usepackage{longtable}
-%\usepackage[table]{xcolor} 
-%\usepackage{indentfirst}
-
-%\usepackage{gensymb}
-
-\usepackage{hyperref}
-\usepackage{color}
-\usepackage[table,xcdraw]{xcolor}
-
-\usepackage[font=small,skip=0pt]{caption}
-
-\usepackage{graphicx}
-\graphicspath{ {./assets/} }
-
-\usepackage{setspace}
-\usepackage{titlesec}
-
-\usepackage{wrapfig}
-
-% https://tex.stackexchange.com/questions/19660/how-to-make-the-size-of-pdf-output-wider
-\setlength{\paperwidth}{8.75in} % set dimension of \paperwidth to add .125 inch on either sidev
-\addtolength{\paperheight}{0.25in} % enlarge \paperheight by .25 inch
-
-\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt}
-\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt}
-\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt}
-
-%\renewcommand{\cftpartfont}{\Large\bfseries}
-%\renewcommand{\cftsecfont}{\normalsize}
-
-% deals with space between paragraphs
-\setlength{\parskip}{\baselineskip}
-\renewcommand{\baselinestretch}{1.4}
-
-% Margin Formatting https://en.wikibooks.org/wiki/LaTeX/Page_Layout
-\addtolength{\hoffset}{0in}
-\addtolength{\voffset}{0in}
-\addtolength{\oddsidemargin}{-.125in}
-\addtolength{\textwidth}{0.5in}
-\addtolength{\topmargin}{-.125in}
-
-% Theorem Enumeration https://tex.stackexchange.com/questions/371731/versioning-theorem-numbers-with-amsthm
-\newcounter{dfnmain}[section]
-\newtheorem{dfninner}{Definition}[dfnmain]
-\makeatletter
-\renewcommand{\thedfninner}{%
-  \arabic{dfnmain}.\@arabic{\numexpr\value{dfninner}-1\relax}%
-}
-\makeatother
-\newenvironment{dfn}
- {\stepcounter{dfnmain}\dfninner}
- {\enddfninner}
-\newenvironment{dfn*}
- {\dfninner}
- {\enddfninner}
- 
-% Example formatting https://tex.stackexchange.com/questions/357810/math-example-formatting
-\newenvironment{exm}[1]{%
-  \par  % start a new paragraph
-  \bigskip  % insert some vertical whitespace
-  \noindent % no paragraph indentation
-  \textbf{Example #1}}{%
-  \par%\bigskip % insert another paragraph break and more vert. whitespace
-}
-
-\usepackage{tikz}
-
-\newtheorem{theorem}{Theorem}
-
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-
-\newtheorem{problem}{Problem}
-
-\newtheorem*{solution}{Solution}
-
-\newtheorem*{remark}{Remark}
-
-\newtheorem{assumption}{Assumption}
-
-\begin{document}
-\setcounter{tocdepth}{1}
-
-% v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
-% \nnimagepage{2021_Front_Cover.pdf}
-
-\nnwallpaper{2021_Intro_Section_Page_Border.pdf}
-
-\begin{figure}[H]
-    \centering \includegraphics[scale=.9]{newton.jpg}
-\end{figure}
-
-\begin{center}
-    \textit{To explain all nature is too difficult a task\\
-    for any one man or even for any one age.\\
-    'Tis much better to do a little with certainty\\
-    and leave the rest for others that come after you.}\\
-    	$\sim$Isaac Newton
-\end{center}
-
-\newpage
-\begin{spacing}{1}
-\tableofcontents
-\end{spacing}
-
-%\begin{figure}[H]
-%    \centering
-%    \vspace*{75pt}
-%    \includegraphics[scale=1.25]{newtons_notebook_fibonacci_spiral.png}
-%\end{figure}
-
-\newpage
-\subsection*{Mission Statement}
-\textit{Newton’s Notebook: The Haverford School STEM Journal} is designed to enhance the interests, talents, and achievements of individuals in mathematics and science and to promote the work of those most passionate about these disciplines. The following articles were written by members and friends of the Haverford community and edited by the \textit{Notebook} staff. We hope these articles inspire readers to further discover the universally beautiful realm of STEM exploration. 
-\subsection*{Staff}
-{\centering{}
-    \textbf{Editors-in-Chief:} Gary Gao '21, Mitav Nayak '22
-    \\
-    \textbf{Designer-in-Chief:} Mitav Nayak '22
-    \\ 
-    \textbf{Assistant Editors:} Brian Williams '21, Adamya Aggarwal '22
-    \\
-    \textbf{Faculty Advisor:} Dr.\ Mark Gottlieb
-    \\}
-\subsection*{Featured Polymath: John Forbes Nash Jr. (1928-2015)}
-John Forbes Nash Jr. was an American mathematician best known for his work in game theory, partial differential equations, cryptography, and mathematical economics. While attending high school in Bluefield, West Virginia, he also enrolled in courses in advanced mathematics at a local community college. Nash went on the graduate with a bachelor’s degree and master’s degree in mathematics from the Carnegie Institute of Technology—now Carnegie Mellon University—when he was just 19 years old. He then attended Princeton University on a scholarship for graduate school and obtained a PhD with a dissertation in non-cooperative games in 1950, at 22 years of age. In his dissertation, he included the foundations for what later came to be known as the Nash equilibrium, which won him the John von Neumann Theory Prize in 1978, the Nobel Prize in Economic Sciences in 1994, and the Leroy P. Steel Prize in 1999. During much of his life, Nash suffered from mental illness. He joined the Massachusetts Institute of Technology in 1951 to research partial differential equations and teach mathematics, but he resigned in 1959 as a result of his schizophrenia and was admitted to a number of hospitals during the 1960s. In 1970, he was discharged from the hospital for the last time, and eventually returned to Princeton as a senior research mathematician. Nash’s extraordinary life is portrayed in the Academy Award-winning film \emph{A Beautiful Mind} (2001).
-\newpage
-
-% Begin the pure math section
-\addcontentsline{toc}{part}{Pure Mathematics}
-\nnimagepage{2021_Pure_Math_Section_Title.pdf}
-
-\nnwallpaper{2021_Pure_Math_Page_Border.pdf}
-\def\currentTitleWallpaper{2021_Pure_Math_Title_Page_Border.pdf}
-
-\input{articles/gao-checksum-2021.tex}
-
-\newpage
-
-\input{articles/aggarwal-variables-2021.tex}
-
-\newpage
-
-\input{articles/gottlieb-foundations-pt2-2021.tex}
-
-\newpage
-
-% Begin the applied math section
-\nnwallpaper{2021_Applied_Math_Page_Border.pdf}
-\def\currentTitleWallpaper{2021_Applied_Math_Title_Page_Border.pdf}
-
-\addcontentsline{toc}{part}{Applied Mathematics}
-\nnimagepage{2021_Applied_Math_Section_Title.pdf}
-
-\input{articles/nayak-oligopoly-2021.tex}
-
-\newpage
-
-\input{articles/kelly-et-al-fishing-2021.tex}
-
-\newpage
-
-\input{articles/kauffman-polar-art-2021.tex}
-
-\newpage
-
-\input{articles/shuchman-et-al-bike-2021.tex}
-
-\newpage
-
-% Begin the applied science section
-\nnwallpaper{2021_Applied_Science_Page_Border.pdf}
-\def\currentTitleWallpaper{2021_Applied_Science_Title_Page_Border.pdf}
-
-\addcontentsline{toc}{part}{Applied Science}
-\nnimagepage{2021_Applied_Science_Section_Title.pdf}
-
-\input{articles/williams-quantum-physics-2021.tex}
-
-\newpage
-
-\input{articles/nayak-newton-motion-2021.tex}
-
-\newpage
-
-\input{articles/wang-fermi-2021.tex}
-
-\newpage
-
-% Begin the math modeling section
-\nnwallpaper{2021_Math_Modeling_Page_Border.pdf}
-\def\currentTitleWallpaper{2021_Math_Modeling_Title_Page_Border.pdf}
-
-\addcontentsline{toc}{part}{Math Modeling}
-\nnimagepage{2021_Math_Modeling_Section_Title.pdf}
-
-%ADD BRIEF SUMMARY OF PROBLEM
-
-\input{articles/m3-problem-2021.tex}
-
-\newpage
-
-\input{articles/m3-team-a-2021.tex}
-
-\newpage
-
-\input{articles/m3-team-b-2021.tex}
-
-\newpage
-
-% Begin the mathematical brainteasers section
-\nnwallpaper{2021_Math_Brainteasers_Page_Border.pdf}
-\def\currentTitleWallpaper{2021_Math_Brainteasers_Title_Page_Border.pdf}
-
-\addcontentsline{toc}{part}{Mathematical Brainteasers}
-\nnimagepage{2021_Math_Brainteasers_Section_Title.pdf}
-
-\input{articles/nayak-bear-2021.tex}
-
-\newpage
-
-\input{articles/aggarwal-missing-dollar-2021.tex}
-
-\newpage
-
-\nnwallpaper{2021_Intro_Section_Page_Border.pdf}
-
-\begin{figure}[H]
-    \centering
-    \vspace*{50pt}
-    \includegraphics[scale=1.25]{newtons_notebook_fibonacci_spiral.png}
-    \vspace*{25pt}
-\end{figure}
-
-    This issue of the \textit{Notebook} included submissions from our own students and faculty. Also added in this issue were two new sections—Math Modeling and Mathematical Brainteasers—containing more complex articles with advanced arguments. The \textit{Notebook} team hopes that the increasing diversity of this journal inspires its readers to pursue STEM with unremitting fervor and renewed dedication. 
-
-\begin{quotation}
-\textit{We are at the very beginning of time for the human race. It is not unreasonable that we grapple with problems. But there are tens of thousands of years in the future. Our responsibility is to do what we can, learn what we can, improve the solutions, and pass them on.}
-	\begin{flushright}
-$\sim$Richard P. Feynman
-	\end{flushright}
-\end{quotation}
-
-\begin{center}
-If you are interested in contributing to the 2021-2022 edition of \textit{Newton’s Notebook},\\ 
-please contact Mitav Nayak, Editor for Issue VI.
-\end{center}
-
-% v COMMENT THIS OUT BEFORE SENDING THE FINAL VERSION TO PRINT, THEY DON'T WANT THE COVERS
-%\newpage
-%\nnimagepage{2021_Back_Cover.pdf}
-
-\end{document}
+\nnarticleheader{An Interesting Example of the Use of Checksum}{Gary Gao, Haverford '21}
+
+\noindent
+\textbf{A Story}
+
+	In an ancient kingdom, there was a tyrant king. One day, he caught two people who turned out to be magicians. The tyrant king wanted to kill them, but he magicians magically persuaded the king to agree to play a game with them. The king said, ``Tomorrow, I will have two hats ready. Each of them can be blue or red. I will have you sit down and face each other, and then put one hat on each of your heads, so you will only be able to see the color of the hat on the other person's head. After that, you will guess the color of the hat on your own head and you will say it out at the same time. If any of you two can guess correctly, I will let you go. Otherwise, you will die." The magicians agreed, and they have a night to discuss a strategy to increase their chances of winning. Is there a way for them to save themselves for sure?\\
+	\indent In fact, the strategy for them is quite simple. They can do the following: Magician 1 will say the color that is the same color as what he sees. Magician 2 will say the color that is different from what he sees. Because they have actually split the the 4 possibilities into two cases: Magician 1 bet that the color of their hats are the same; Magician 2 bet that the color of their hats are different. In this way, exactly one of them will guess correctly. Thus, they are saved.
+
+\noindent
+\textbf{A Generalization}
+
+	After seeing this story, we can try to solve this problem.
+	\begin{problem}
+		10 people stand on a circle. Each person has a hat on the head. Each hat can be any of the 10 given colors. Every person can see the hat on the head of all other people but not himself. They will guess the color of the hat on their own head. They will say their guesses out loud at the same time, but they are allowed to discuss strategy in advance. Can you guarantee that one of them will guess correctly?
+	\end{problem}
+	\begin{solution}	
+		We number the color with the integers from 0 to 9 and number the 10 people with the integers from 0 to 9 clockwise. Define $a_i$ to be the number corresponding to the color of the hat on the head of the $i$th person. And the strategy will be the following: Person $j$ will assume that $a_0+a_1+...+a_9 \equiv j \mod 10$ and calculate $a_k$ based on the color of other people's hats and $j$. In this way, the $k$th person will guess correctly, where $a_0+a_1+...+a_9 \equiv k \mod 10$, when calculated with the actual values.
+	\end{solution}
+	This is related to the concept of checksums, because in the strategy, every person's guess depends on this expression $(a_0+a_1+...+a_9)\mod 10$.
+
+\noindent	
+\textbf{Further Generalization}
+
+	After seeing these problems' stucture, we can aim for a more generalized, optimal conclusion.
+	\begin{problem}
+		$n$ people stand on a circle. Each person has a hat on the head. Each hat can be any of the $c$ given colors. Every person can see the hat on the head of all other people but not himself. They will guess the color of the hat on their own head. They will say their guesses out loud at the same time, but they are allowed to discuss strategy in advance. At most how many people can guess correctly for sure?
+	\end{problem}
+	\begin{solution}
+		Similar to our solution to problem 1, we can number the color with the integers from 0 to $c-1$. We will number the n people with the integers from 0 to $n-1$ clockwise. Define $a_i$  to be the number corresponding to the color of the hat on the head of the $i$th person. \\
+		The strategy will be the following: Person $j$ will assume that $a_0+a_1+...+a_{n-1} \equiv j \mod c$ and calculate $a_k$ based on the color of other people's hats and $j$. In this way, the $k$th person will guess correctly if $a_0+a_1+...+a_{n-1} \equiv k \mod c$ when calculated with the actual values. It is easy to see that the amount of people that is guaranteed to guess correctly is equal to $\lfloor \frac{n}{c} \rfloor$\\
+		We also want to prove that $\lfloor \frac{n}{c} \rfloor$ is the maximum. We can notice that among all the possible $c^n$ possibilities, each specific person can guess correctly $c^{n-1}$ times. This means the expected value of correct guesses from each person each time is $\frac{c^n}{c^{n-1}} = \frac{1}{c}$. By the linearity of expectation, the expected number of correct guesses each time is $n \cdot \frac{1}{c} = \frac{n}{c}$, which means there exist at least one situation where at most $\lfloor \frac{n}{c} \rfloor$ guesses correctly. So $\lfloor \frac{n}{c} \rfloor$ is the maximum amount we want.
+	\end{solution}
+	\indent We can see that checksums are very powerful in finding strategies for this kind of problems. For problems with more restrictions, it is also possible that we use more sophisticated checksums that can involve polynomial and more modular expressions.
