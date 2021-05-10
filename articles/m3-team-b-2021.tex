@@ -9,16 +9,16 @@
 
  
 \section*{Mobilizing Mobile}
-	\subsection{Problem Redefined}
+	\subsection*{Problem Redefined}
 	Q3 asks us to find an optimal plan to place cell towers in a region and then demonstrate accuracy in the three hypothetical regions provided.
 		
-	\subsection{Assumptions}
+	\subsection*{Assumptions}
 	\begin{itemize}
 	\item Assumption 1: The word “optimal” in the problem means the most households get internet through the fewest cell towers.
 	\item Assumption 2: As long as a house is within range of a tower, we consider it to be fully serviced in terms of bandwidth.
 	\end{itemize}
 
-	\subsection{Approaching the Problem}
+	\subsection*{Approaching the Problem}
 	We paralleled this problem to the Maximal Covering Location Problem (MCLP), whose objective is to minimize the number of facilities (that each have a fixed radius r that dictates its service area) necessary to cover the population of a set of n nodes.\\
 	\indent Let’s define some variables before we begin.
 	\begin{center} \begin{tabular} {|c|c|}
@@ -42,44 +42,57 @@
 	\end{center}
 	Basically, we want to maximize the demand (or the number of households covered). A household cannot be covered unless a tower is turned on/used, and we want to fit the number of towers within a constrained budget. Remember, Yi = 1 if household i is covered by at least one facility, and 0 otherwise.
 
-	\subsection{Applying the MCLP to an Example}
+	\subsection*{Applying the MCLP to an Example}
 	For an example simulation, we will be using a very simple service area, composed of one region that has 500 nodes (households) in blue. Each household requires a bandwidth of 20 Mbps and each tower can service an unlimited amount of bandwidth and can service at a range of 45 miles. The number of towers ($p$) was capped at 20, and in this random distribution model, the towers served the maximum number of households (56.8\% of the population), as seen in the image below:
-	\begin{figure}[p]
-	\begin{subfigure}{.5\textwidth}
-  	\includegraphics[width=\linewidth]{pic1.png}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-  	\includegraphics[width=\linewidth]{pic2.png}
-	\end{subfigure}
-	\end{figure}
-	\begin{figure}[p]
-	\caption*{In the below image, we see a representation of the same scenario but with 40 stations, 45 range, 50mbps per household, and 650mbps throughput.}
-	\begin{subfigure}{.5\textwidth}
-  	\includegraphics[width=\linewidth]{pic3.png}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-  	\includegraphics[width=\linewidth]{pic4.png}
-	\end{subfigure}
-	\end{figure}
-	
-	\cleardoublepage
-	\subsection{Simulation Algorithm}
+
+\renewcommand{\thefigure}{1}
+    \begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{pic1.png}
+     
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{pic2.png}
+     
+   \end{minipage}
+\end{figure}
+    
+    
+    In the below image, we see a representation of the same scenario but with 40 stations, 45 range, 50mbps per household, and 650mbps throughput.
+    
+    \renewcommand{\thefigure}{1}
+    \begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{pic3.png}
+     
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.9\linewidth]{pic4.png}
+     
+   \end{minipage}
+\end{figure}
+    
+
+	\subsection*{Simulation Algorithm}
 	We created a simulation algorithm to visually represent households that are and aren't covered by a cell tower. Below is the skeleton of the algorithm in pseudocode.
 	\begin{enumerate}
 	\item For each node i, assign i to a tower if that tower’s range covers that node (note that one node can be assigned to multiple towers).
 	\item Add its demand to a variable that represents the tower’s capacity. If a node is covered by two different towers, split its demand evenly and add the halved demand to each tower’s capacity.
 	\item Any unserved nodes will be marked red.
-	\item Iterate through the towers. If the sum of the demands of each node covered by a certain tower outweighs the tower’s capacity, assign each covered node the color yellow
+	\item Iterate through the towers. If the sum of the demands of each node covered by a certain tower outweighs the tower’s capacity, assign each covered node the color yellow.
 	\item Else, assign the nodes the color green.
 	\end{enumerate}
 	We can see the simulation algorithm results in the images below. In the first image, bandwidth per tower is capped at 200mbps total. 2\% of the nodes are green.
 	\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{pic5.png}
+	\includegraphics[width=0.5\linewidth]{pic5.png}
 	\end{figure}
 	
-	\cleardoublepage
-	\subsection{Flaws and Additional Considerations for Improvements}
+	\subsection*{Flaws and Additional Considerations for Improvements}
 	\begin{itemize}
 	\item Some houses may need to be in range of more than one tower to be fully serviced given the house’s bandwidth load.
 	\item Some towers may be at full capacity and cannot provide bandwidth to any more households. We take this into account in our simulation software, which marks “fully loaded” towers yellow. However, our MCLP solver software does not take this into consideration.
@@ -435,3 +448,54 @@ pygame.quit()
  
 	\end{verbatim}
 	\end{singlespace}
+
+\begin{thebibliography}{2}
+
+\bibitem{} 
+Measuring broadband america. (2021, February 12). Retrieved March 01, 2021, from https://www.fcc.gov/general/measuring-broadband-america
+
+\bibitem{}
+Markgraf, B. (2016, October 26). How far can a cell tower be for a cellphone to pick up the
+signal? Retrieved March 02, 2021, from https://smallbusiness.chron.com/far-can-cell-
+tower-cellphone-pick-up-signal-32124.html
+
+\bibitem{}
+Berry, J. J. (2020, August 27). COVID-19 exposes why access to the internet is a human
+right. Retrieved March 02, 2021, from http://www.openglobalrights.org/covid-19-exposes-why-access-to-internet-is-human-right/.
+
+\bibitem{}
+Dvorak, Petula. “Perspective | When &#39;Back to School&#39; Means a Parking Lot and the Hunt for a
+WiFi Signal.” The Washington Post, WP Company, 27 Aug. 2020,
+www.washingtonpost.com/local/when-back-to-school-means-a-parking-lot-and-the-hunt-for-a-
+wifi-signal/2020/08/27/0f785d5a-e873-11ea-970a-64c73a1c2392\_story.html.
+
+\bibitem{}
+Chung, C. (1986). Recent Applications of the Maximal Covering Location Planning
+(M.C.L.P.) Model. Retrieved March 1, 2021, from https://www.jstor.org/stable/2581958
+
+\bibitem{}
+https://www.youtube.com/watch?v=i2Xy3VSkGRs
+
+\bibitem{}
+https://www.youtube.com/watch?v=sA8ItKmdwjM
+
+\bibitem{}
+Zarandi, M., Davari, S., &amp; Sisakht, S. (2011, November 19). The large scale maximal covering location problem. Retrieved March 02, 2021, from
+https://www.sciencedirect.com/science/article/pii/S1026309811002100#s000040
+
+\bibitem{} 
+Snyder, S., &amp; Haight, R. (2016). Application of the Maximal Covering Location Problem
+to Habitat Reserve Site Selection: A Review. Retrieved March 1, 2021, from
+https://www.fs.fed.us/nrs/pubs/jrnl/2016/nrs\_2016\_snyder\_001.pdf
+
+\bibitem{}
+Goldstein, R. (2014, July 25). Duality in Linear Programming. Retrieved March 1, 2021,
+from http://web.mit.edu/15.053/www/AMP-Chapter-04.pdf
+
+\bibitem{}
+Rodriguez, F., Blum, C., Lozano, M., &amp; Garcia-Martinez, C. (2012, April). Iterated Greedy
+Algorithms for the Maximal Covering Location Problem. Retrieved March 1, 2021, from
+https://www.researchgate.net/publication/265311031\_Iterated\_Greedy\_Algorithms\_for\_the\_Maximal\_Covering\_Location\_Problem
+
+
+\end{thebibliography}
